@@ -63,7 +63,10 @@ function Navbar(props) {
               setAbout(false);
             }}
           >
-            <Typography style={{ color: Home ? "#fccc14" : "#5b5c5c" }}>
+            <Typography
+              className="h2"
+              style={{ color: Home ? "#fccc14" : "#5b5c5c" }}
+            >
               Home
             </Typography>
           </div>
@@ -76,7 +79,7 @@ function Navbar(props) {
               await document.querySelector("#tenthSection").scrollIntoView();
             }}
           >
-            <Typography>9th-10th</Typography>
+            <Typography className="h2">9th-10th</Typography>
           </div>
           <div
             className="h1"
@@ -87,10 +90,10 @@ function Navbar(props) {
               await document.querySelector("#twelveSection").scrollIntoView();
             }}
           >
-            <Typography>11th-12th</Typography>
+            <Typography className="h2">11th-12th</Typography>
           </div>
           <div className="h1">
-            <Typography>Undergraduate</Typography>
+            <Typography className="h2">Undergraduate</Typography>
           </div>
           <div
             className="h1"
@@ -100,7 +103,10 @@ function Navbar(props) {
               setAbout(false);
             }}
           >
-            <Typography style={{ color: Business ? "#fccc14" : "#5b5c5c" }}>
+            <Typography
+              className="h2"
+              style={{ color: Business ? "#fccc14" : "#5b5c5c" }}
+            >
               Business
             </Typography>
           </div>
@@ -112,7 +118,12 @@ function Navbar(props) {
               setHome(false);
             }}
           >
-            <Typography style={{ color: About ? "#fccc14" : "#5b5c5c" }}>
+            <Typography
+              className="h2"
+              style={{
+                color: About ? "#fccc14" : "#5b5c5c",
+              }}
+            >
               About
             </Typography>
           </div>
@@ -147,7 +158,10 @@ function Navbar(props) {
             setClick(false);
           }}
         >
-          <Typography style={{ color: Home ? "#fccc14" : "#5b5c5c" }}>
+          <Typography
+            className="h2"
+            style={{ color: Home ? "#fccc14" : "#5b5c5c" }}
+          >
             Home
           </Typography>
         </div>
@@ -161,7 +175,7 @@ function Navbar(props) {
             setClick(false);
           }}
         >
-          <Typography>9th-10th</Typography>
+          <Typography className="h2">9th-10th</Typography>
         </div>
         <div
           className="h1"
@@ -173,10 +187,10 @@ function Navbar(props) {
             setClick(false);
           }}
         >
-          <Typography>11th-12th</Typography>
+          <Typography className="h2">11th-12th</Typography>
         </div>
         <div className="h1">
-          <Typography>Undergraduate</Typography>
+          <Typography className="h2">Undergraduate</Typography>
         </div>
         <div
           className="h1"
@@ -187,7 +201,10 @@ function Navbar(props) {
             setClick(false);
           }}
         >
-          <Typography style={{ color: Business ? "#fccc14" : "#5b5c5c" }}>
+          <Typography
+            className="h2"
+            style={{ color: Business ? "#fccc14" : "#5b5c5c" }}
+          >
             Business
           </Typography>
         </div>
@@ -200,7 +217,10 @@ function Navbar(props) {
             setClick(false);
           }}
         >
-          <Typography style={{ color: About ? "#fccc14" : "#5b5c5c" }}>
+          <Typography
+            className="h2"
+            style={{ color: About ? "#fccc14" : "#5b5c5c" }}
+          >
             About
           </Typography>
         </div>

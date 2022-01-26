@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import {
   Button,
@@ -15,6 +15,21 @@ function ModalPage(props) {
   const { modalS } = useContext(UserContext);
   const [modal, setModal] = modalS;
   const [classx, setClassx] = useState("");
+  const [screenSize, setScreenSize] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth < 600) {
+      setScreenSize(true);
+    } else setScreenSize(false);
+  }, []);
+
+  window.addEventListener("resize", () => Resize());
+  const Resize = () => {
+    if (window.innerWidth < 600) setScreenSize(true);
+    else setScreenSize(false);
+  };
+
+  console.log(screenSize);
   return (
     <div>
       <Modal
@@ -29,7 +44,7 @@ function ModalPage(props) {
         <div
           style={{
             padding: 10,
-            paddingInline: 10,
+            paddingInline: screenSize ? 40 : 10,
             // border: "2px solid red",
             backgroundColor: "white",
             display: "flex",
@@ -81,24 +96,36 @@ function ModalPage(props) {
               justifyContent: "center",
             }}
           >
-            <div>
+            <div
+              style={{
+                // border: "2px solid red",
+                width: screenSize ? "100%" : "40%",
+              }}
+            >
               <InputLabel style={{ margin: 10, marginBottom: 0 }}>
                 Full Name
               </InputLabel>
               <TextField
                 placeholder="Full Name"
                 variant="outlined"
-                style={{ margin: 10 }}
+                style={{ margin: 10, width: "90%" }}
+                color="warning"
               />
             </div>
-            <div>
+            <div
+              style={{
+                // border: "2px solid red",
+                width: screenSize ? "100%" : "40%",
+              }}
+            >
               <InputLabel style={{ margin: 10, marginBottom: 0 }}>
                 Age
               </InputLabel>
               <TextField
                 placeholder="Age"
                 variant="outlined"
-                style={{ margin: 10 }}
+                style={{ margin: 10, width: "90%" }}
+                color="warning"
               />
             </div>
           </div>
@@ -111,17 +138,28 @@ function ModalPage(props) {
               flexWrap: "wrap",
             }}
           >
-            <div>
+            <div
+              style={{
+                width: screenSize ? "100%" : "40%",
+                // border: "2px solid red",
+              }}
+            >
               <InputLabel style={{ margin: 10, marginBottom: 0 }}>
                 Email Id
               </InputLabel>
               <TextField
                 placeholder="Enter Email Id"
                 variant="outlined"
-                style={{ margin: 10 }}
+                style={{ margin: 10, width: "90%" }}
+                color="warning"
               />
             </div>
-            <div>
+            <div
+              style={{
+                width: screenSize ? "100%" : "40%",
+                // border: "2px solid red",
+              }}
+            >
               <InputLabel style={{ margin: 10, marginBottom: 0 }}>
                 Phone Number
               </InputLabel>
@@ -129,7 +167,8 @@ function ModalPage(props) {
                 placeholder="Phone Number"
                 variant="outlined"
                 inputProps={{ inputMode: "numeric" }}
-                style={{ margin: 10 }}
+                style={{ margin: 10, width: "90%" }}
+                color="warning"
               />
             </div>
           </div>
@@ -137,7 +176,6 @@ function ModalPage(props) {
             style={{
               display: "flex",
               alignItems: "center",
-              paddingLeft: "10%",
               // border: "2px solid red",
               flexWrap: "wrap",
               justifyContent: "center",
@@ -146,7 +184,7 @@ function ModalPage(props) {
             <div
               style={{
                 // border: "2px solid red",
-                width: "82%",
+                width: screenSize ? "100%" : "81%",
               }}
             >
               <InputLabel style={{ margin: 10, marginBottom: 0 }}>
@@ -155,7 +193,8 @@ function ModalPage(props) {
               <Select
                 value={classx}
                 onChange={(v) => setClassx(v.target.value)}
-                style={{ margin: 10, width: "83%" }}
+                style={{ margin: 10, width: screenSize ? "90%" : "95%" }}
+                color="warning"
               >
                 <MenuItem value={6}>6th</MenuItem>
                 <MenuItem value={7}>7th</MenuItem>
@@ -174,16 +213,17 @@ function ModalPage(props) {
               justifyContent: "center",
             }}
           >
-            <div style={{ width: "64%" }}>
+            <div style={{ width: screenSize ? "100%" : "81%" }}>
               <InputLabel style={{ margin: 10, marginBottom: 0 }}>
                 Comment
               </InputLabel>
               <TextField
+                color="warning"
                 placeholder="Comment"
                 variant="outlined"
                 multiline
                 rows={4}
-                style={{ margin: 10, width: "96%" }}
+                style={{ margin: 10, width: screenSize ? "90%" : "95%" }}
               />
             </div>
           </div>

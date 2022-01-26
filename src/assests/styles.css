@@ -14,3 +14,7 @@
   color: #fccc14;
   cursor: pointer;
 }
+.h2:hover {
+  color: #fccc14 !important;
+  cursor: pointer;
+}
