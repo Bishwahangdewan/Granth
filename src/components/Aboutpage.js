@@ -1,5 +1,6 @@
 import { Typography, Button } from "@mui/material";
 import React from "react";
+import ModalPage from "./ModalPage";
 
 function Aboutpage(props) {
   return (
@@ -12,7 +13,7 @@ function Aboutpage(props) {
           )`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain",
-            backgroundColor: "#6483e4",
+            backgroundColor: "#fccc14",
             marginTop: 20,
             height: 250,
             display: "flex",
@@ -24,7 +25,10 @@ function Aboutpage(props) {
             padding: 15,
           }}
         >
-          <Typography variant="h4" style={{ fontWeight: "bold" }}>
+          <Typography
+            variant="h4"
+            style={{ fontWeight: "bold", color: "white" }}
+          >
             We are xyz
           </Typography>
           <Typography style={{ marginTop: 10 }}>
@@ -129,6 +133,7 @@ function Aboutpage(props) {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "50%",
+          backgroundColor: "fccc14",
           position: "relative",
           marginTop: 100,
           height: 220,
@@ -146,7 +151,7 @@ function Aboutpage(props) {
             // border: "2px solid black",
           }}
         >
-          <Typography variant="h4">
+          <Typography variant="h4" style={{ color: "white" }}>
             Not able to find what you are looking for? Contact Us
           </Typography>
           <div
@@ -163,7 +168,7 @@ function Aboutpage(props) {
             <Button
               style={{
                 backgroundColor: "white",
-                color: "black",
+                color: "#5b5c5c",
                 padding: 12,
                 paddingInline: 30,
               }}
@@ -174,6 +179,7 @@ function Aboutpage(props) {
         </div>
       </div>
       <div style={{ height: 200 }}></div>
+      <ModalPage />
     </div>
   );
 }

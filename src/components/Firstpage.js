@@ -12,7 +12,16 @@ const theme = createTheme({
   typography: {
     fontFamily: ["Open Sans", "sans-serif"].join(","),
     fontSize: 14,
+    h4: {
+      color: "#fccc14",
+    },
+    body1: {
+      color: "#5b5c5c",
+    },
   },
+  // palette: {
+  //   primary: "red",
+  // },
 });
 
 const Firstpage = (props) => {

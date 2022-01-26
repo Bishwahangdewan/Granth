@@ -3,14 +3,16 @@ import { Typography, Button } from "@mui/material";
 import PhoneIcon from "@mui/icons-material/Phone";
 import DensityMediumIcon from "@mui/icons-material/DensityMedium";
 import { UserContext } from "./StateMan";
+import TsptPNG from "../assests/TsptPNG.png";
 
 function Navbar(props) {
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
-  const { HomeS, BusinessS, AboutS } = useContext(UserContext);
+  const { HomeS, BusinessS, AboutS, modalS } = useContext(UserContext);
   const [Home, setHome] = HomeS;
   const [Business, setBusiness] = BusinessS;
   const [About, setAbout] = AboutS;
+  const [modal, setModal] = modalS;
 
   window.addEventListener("resize", () => Resize());
   const Resize = () => {
@@ -27,17 +29,12 @@ function Navbar(props) {
       <header className="header">
         <div
           style={{
-            marginLeft: "5%",
+            marginLeft: "2%",
             display: "flex",
             // border: "2px solid red",
           }}
         >
-          <img
-            src="https://idreamcareer.com/wp-content/uploads/2021/08/small-logo-1.webp"
-            height="60px"
-            width="80px"
-            alt=""
-          />
+          <img src={TsptPNG} height="60px" width="100%" alt="" />
         </div>
         <div
           style={{
@@ -66,7 +63,7 @@ function Navbar(props) {
               setAbout(false);
             }}
           >
-            <Typography style={{ color: Home ? "blue" : "black" }}>
+            <Typography style={{ color: Home ? "#fccc14" : "#5b5c5c" }}>
               Home
             </Typography>
           </div>
@@ -103,7 +100,7 @@ function Navbar(props) {
               setAbout(false);
             }}
           >
-            <Typography style={{ color: Business ? "blue" : "black" }}>
+            <Typography style={{ color: Business ? "#fccc14" : "#5b5c5c" }}>
               Business
             </Typography>
           </div>
@@ -115,7 +112,7 @@ function Navbar(props) {
               setHome(false);
             }}
           >
-            <Typography style={{ color: About ? "blue" : "black" }}>
+            <Typography style={{ color: About ? "#fccc14" : "#5b5c5c" }}>
               About
             </Typography>
           </div>
@@ -123,7 +120,12 @@ function Navbar(props) {
             <PhoneIcon />
           </div>
           <div style={{ margin: 15 }}>
-            <Button variant="contained" size="large">
+            <Button
+              variant="contained"
+              size="large"
+              style={{ backgroundColor: "#fccc14", color: "#5b5c5c" }}
+              onClick={() => setModal(true)}
+            >
               Book Now
             </Button>
           </div>
@@ -145,7 +147,7 @@ function Navbar(props) {
             setClick(false);
           }}
         >
-          <Typography style={{ color: Home ? "blue" : "black" }}>
+          <Typography style={{ color: Home ? "#fccc14" : "#5b5c5c" }}>
             Home
           </Typography>
         </div>
@@ -185,7 +187,7 @@ function Navbar(props) {
             setClick(false);
           }}
         >
-          <Typography style={{ color: Business ? "blue" : "black" }}>
+          <Typography style={{ color: Business ? "#fccc14" : "#5b5c5c" }}>
             Business
           </Typography>
         </div>
@@ -198,16 +200,25 @@ function Navbar(props) {
             setClick(false);
           }}
         >
-          <Typography style={{ color: About ? "blue" : "black" }}>
+          <Typography style={{ color: About ? "#fccc14" : "#5b5c5c" }}>
             About
           </Typography>
         </div>
         <div style={{ margin: 15 }}>
-          <Button variant="contained" size="large">
+          <Button
+            variant="contained"
+            size="large"
+            style={{ backgroundColor: "#fccc14", color: "#5b5c5c" }}
+            onClick={() => {
+              setModal(true);
+              setClick(false);
+            }}
+          >
             Book Now
           </Button>
         </div>
       </div>
+      <div style={{ display: "none" }}>{modal}</div>
     </div>
   );
 }

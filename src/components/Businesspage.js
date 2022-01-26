@@ -1,5 +1,6 @@
 import { Button, Typography } from "@mui/material";
 import React from "react";
+import ModalPage from "./ModalPage";
 
 function Businesspage(props) {
   return (
@@ -14,10 +15,7 @@ function Businesspage(props) {
         }}
       >
         <div style={{ width: 500 }}>
-          <Typography
-            variant="h4"
-            style={{ fontWeight: "bold", color: " #f6b051" }}
-          >
+          <Typography variant="h4" style={{ fontWeight: "bold" }}>
             Sit cillum qui ex proident nisi est nostrud anim excepteur nostrud
             eu consequat quis consectetur.
           </Typography>
@@ -26,7 +24,14 @@ function Businesspage(props) {
             cupidatat magna eiusmod ea enim et occaecat. Amet commodo tempor
             esse et velit sunt esse.
           </Typography>
-          <Button variant="contained" style={{ marginTop: 30 }}>
+          <Button
+            variant="contained"
+            style={{
+              marginTop: 30,
+              backgroundColor: "#fccc14",
+              color: "#5b5c5c",
+            }}
+          >
             Contact Us
           </Button>
         </div>
@@ -51,7 +56,7 @@ function Businesspage(props) {
           <div style={{ width: 800 }}>
             <Typography
               variant="h4"
-              style={{ fontWeight: "bold", color: "#6483e4", marginTop: 10 }}
+              style={{ fontWeight: "bold", marginTop: 10 }}
             >
               Aliquip culpa deserunt tempor ullamco dolore cupidatat culpa
               occaecat eiusmod.
@@ -156,7 +161,9 @@ function Businesspage(props) {
             // border: "2px solid black",
           }}
         >
-          <Typography variant="h4">To know more, contact us at</Typography>
+          <Typography variant="h4" style={{ color: "white" }}>
+            To know more, contact us at
+          </Typography>
           <div
             style={{
               margin: 8,
@@ -171,7 +178,7 @@ function Businesspage(props) {
             <Button
               style={{
                 backgroundColor: "white",
-                color: "black",
+                color: "#5b5c5c",
                 padding: 12,
                 paddingInline: 30,
               }}
@@ -181,7 +188,7 @@ function Businesspage(props) {
             <Button
               style={{
                 backgroundColor: "white",
-                color: "black",
+                color: "#5b5c5c",
                 padding: 12,
                 paddingInline: 30,
               }}
@@ -192,6 +199,7 @@ function Businesspage(props) {
         </div>
       </div>
       <div style={{ height: 200 }}></div>
+      <ModalPage />
     </div>
   );
 }

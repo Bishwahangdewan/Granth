@@ -1,7 +1,10 @@
-import React from "react";
-import { Typography } from "@mui/material";
+import React, { useContext } from "react";
+import { Typography, Button } from "@mui/material";
+import { UserContext } from "./StateMan";
 
 function TwelveSection(props) {
+  const { modalS } = useContext(UserContext);
+  const [modal, setModal] = modalS;
   return (
     <div
       style={{
@@ -32,7 +35,7 @@ function TwelveSection(props) {
           flexWrap: "wrap",
         }}
       >
-        <Typography variant="h5" style={{ fontWeight: "bold" }}>
+        <Typography variant="h4" style={{ fontWeight: "bold" }}>
           Do pariatur irure commodo aliqua labore in mollit nulla voluptate
           commodo proident.
         </Typography>
@@ -44,7 +47,22 @@ function TwelveSection(props) {
           adipisicing. Quis dolor dolor et id excepteur aute esse cillum qui.
           Proident aute excepteur do sit Lorem consequat laborum.
         </Typography>
+        <Button
+          variant="contained"
+          size="large"
+          style={{
+            backgroundColor: "#fccc14",
+            paddingInline: 87,
+            paddingBlock: 15,
+            margin: 10,
+            color: "#5b5c5c",
+          }}
+          onClick={() => setModal(true)}
+        >
+          Book Now For 11th-12th
+        </Button>
       </div>
+      <div style={{ display: "none" }}>{modal}</div>
     </div>
   );
 }
