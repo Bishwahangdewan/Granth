@@ -2,6 +2,7 @@ import { Typography } from "@mui/material";
 import React from "react";
 import TenthSection from "./TenthSection";
 import TwelveSection from "./TwelveSection";
+import ModalPage from "./ModalPage";
 
 function Counsellingpage(props) {
   return (
@@ -234,6 +235,7 @@ function Counsellingpage(props) {
       </div>
       <TenthSection />
       <TwelveSection />
+      <ModalPage />
     </div>
   );
 }
