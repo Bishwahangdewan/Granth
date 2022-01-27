@@ -36,17 +36,45 @@ function TwelveSection(props) {
         }}
       >
         <Typography variant="h4" style={{ fontWeight: "bold" }}>
-          Do pariatur irure commodo aliqua labore in mollit nulla voluptate
-          commodo proident.
+          Class 11 - Class 12
         </Typography>
         <Typography style={{ marginTop: 10 }}>
-          Deserunt ut enim eu voluptate enim in eu elit sint magna laborum
-          mollit eu ipsum. Laboris ipsum amet veniam pariatur consectetur nulla
-          id consequat aute Lorem proident. Laborum velit incididunt aute
-          exercitation deserunt esse. Lorem elit est eiusmod non eiusmod laborum
-          adipisicing. Quis dolor dolor et id excepteur aute esse cillum qui.
-          Proident aute excepteur do sit Lorem consequat laborum.
+          So Kids, are you set to take the correct group of subjects? How do you
+          plan to select your optional subjects? Do you need some extra aid to
+          pursue your passion/hobbies?
         </Typography>
+        <Typography>
+          Let’s talk and hear you out.... What is it that you want to do?
+        </Typography>
+        <Typography>
+          Get the right advice from the experts who can guide you make an
+          informative decision
+        </Typography>
+        <ul>
+          <li>
+            <Typography>
+              We’ll help you see through the choices that you make
+            </Typography>
+          </li>
+          <li>
+            <Typography>
+              Know the personality group you fall into in terms of skill sets,
+              ambitions and aspirations
+            </Typography>
+          </li>
+          <li>
+            <Typography>
+              You can consider other vocational courses along with regular
+              subjects
+            </Typography>
+          </li>
+          <li>
+            <Typography>
+              You can consider other vocational courses along with regular
+              subjects
+            </Typography>
+          </li>
+        </ul>
         <Button
           variant="contained"
           size="large"

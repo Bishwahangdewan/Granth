@@ -4,7 +4,7 @@ import ModalPage from "./ModalPage";
 
 function Businesspage(props) {
   return (
-    <div style={{ marginTop: 60 }}>
+    <div style={{ marginTop: 35 }}>
       <div
         style={{
           display: "flex",
@@ -35,7 +35,7 @@ function Businesspage(props) {
             Contact Us
           </Button>
         </div>
-        <div style={{ marginTop: 20 }}>
+        <div>
           <img
             src="https://edvi.app/static/media/business-bg.8f5622b2.webp"
             height="370px"
@@ -44,7 +44,7 @@ function Businesspage(props) {
           />
         </div>
       </div>
-      <div style={{ marginTop: 100 }}>
+      <div style={{ marginTop: 80 }}>
         <div
           style={{
             display: "flex",

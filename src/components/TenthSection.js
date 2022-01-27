@@ -29,17 +29,38 @@ function TenthSection(props) {
         }}
       >
         <Typography variant="h4" style={{ fontWeight: "bold" }}>
-          Incididunt sunt ullamco ullamco in amet irure elit sunt tempor velit
-          proident qui anim qui.
+          Class 9 - Class 10
         </Typography>
         <Typography style={{ marginTop: 10 }}>
-          Ullamco aliquip ipsum est id deserunt sint ipsum ea pariatur culpa
-          exercitation veniam cupidatat. Ad et tempor excepteur ullamco magna
-          dolore aliquip id nulla adipisicing aliqua. Est labore eiusmod aliqua
-          mollit. Excepteur nulla ea excepteur pariatur ea elit consectetur. Est
-          quis consequat id enim quis voluptate nulla excepteur culpa ullamco
-          aliqua.
+          Are you geared up to choose the right subject? Do you know the right
+          skill set for you? Can you create the right concoction of subjects?
+          Don’t worry it’s not mind-boggling... Leave it to us
         </Typography>
+        <Typography>
+          Get the right advice from the experts who can guide you make an
+          informative decision
+        </Typography>
+        <ul>
+          <li>
+            <Typography>
+              We’ll help you understand your area of interest
+            </Typography>
+          </li>
+          <li>
+            <Typography>
+              Guide you through various career opportunities that can be pursued
+            </Typography>
+          </li>
+          <li>
+            <Typography>
+              Lay the foundation of picking up the right goals according to your
+              personality
+            </Typography>
+          </li>
+          <li>
+            <Typography>Answer all your inquisitiveness</Typography>
+          </li>
+        </ul>
 
         <Button
           variant="contained"

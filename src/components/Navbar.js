@@ -8,8 +8,10 @@ import TsptPNG from "../assests/TsptPNG.png";
 function Navbar(props) {
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
-  const { HomeS, BusinessS, AboutS, modalS } = useContext(UserContext);
+  const { HomeS, CounsellingS, BusinessS, AboutS, modalS } =
+    useContext(UserContext);
   const [Home, setHome] = HomeS;
+  const [Counselling, setCounselling] = CounsellingS;
   const [Business, setBusiness] = BusinessS;
   const [About, setAbout] = AboutS;
   const [modal, setModal] = modalS;
@@ -61,6 +63,7 @@ function Navbar(props) {
               setBusiness(false);
               setHome(true);
               setAbout(false);
+              setCounselling(false);
             }}
           >
             <Typography
@@ -70,7 +73,7 @@ function Navbar(props) {
               Home
             </Typography>
           </div>
-          <div
+          {/* <div
             className="h1"
             onClick={async () => {
               await setBusiness(false);
@@ -91,9 +94,22 @@ function Navbar(props) {
             }}
           >
             <Typography className="h2">11th-12th</Typography>
-          </div>
-          <div className="h1">
-            <Typography className="h2">Undergraduate</Typography>
+          </div> */}
+          <div
+            className="h1"
+            onClick={() => {
+              setBusiness(false);
+              setHome(false);
+              setAbout(false);
+              setCounselling(true);
+            }}
+          >
+            <Typography
+              className="h2"
+              style={{ color: Counselling ? "#fccc14" : "#5b5c5c" }}
+            >
+              Career Counselling
+            </Typography>
           </div>
           <div
             className="h1"
@@ -101,6 +117,7 @@ function Navbar(props) {
               setBusiness(true);
               setHome(false);
               setAbout(false);
+              setCounselling(false);
             }}
           >
             <Typography
@@ -116,6 +133,7 @@ function Navbar(props) {
               setAbout(true);
               setBusiness(false);
               setHome(false);
+              setCounselling(false);
             }}
           >
             <Typography
@@ -156,6 +174,7 @@ function Navbar(props) {
             setHome(true);
             setAbout(false);
             setClick(false);
+            setCounselling(false);
           }}
         >
           <Typography
@@ -165,7 +184,7 @@ function Navbar(props) {
             Home
           </Typography>
         </div>
-        <div
+        {/* <div
           className="h1"
           onClick={async () => {
             await setBusiness(false);
@@ -188,9 +207,23 @@ function Navbar(props) {
           }}
         >
           <Typography className="h2">11th-12th</Typography>
-        </div>
-        <div className="h1">
-          <Typography className="h2">Undergraduate</Typography>
+        </div> */}
+        <div
+          className="h1"
+          onClick={() => {
+            setBusiness(false);
+            setHome(false);
+            setAbout(false);
+            setCounselling(true);
+            setClick(false);
+          }}
+        >
+          <Typography
+            className="h2"
+            style={{ color: Counselling ? "#fccc14" : "#5b5c5c" }}
+          >
+            Career Counselling
+          </Typography>
         </div>
         <div
           className="h1"
@@ -199,6 +232,7 @@ function Navbar(props) {
             setHome(false);
             setAbout(false);
             setClick(false);
+            setCounselling(false);
           }}
         >
           <Typography
@@ -215,6 +249,7 @@ function Navbar(props) {
             setBusiness(false);
             setHome(false);
             setClick(false);
+            setCounselling(false);
           }}
         >
           <Typography
