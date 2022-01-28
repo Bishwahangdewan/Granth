@@ -8,6 +8,7 @@ import Homepage from "./Homepage";
 import Businesspage from "./Businesspage";
 import Aboutpage from "./Aboutpage";
 import Counsellingpage from "./Counsellingpage";
+import Planningpage from "./Planningpage";
 
 const theme = createTheme({
   typography: {
@@ -15,6 +16,9 @@ const theme = createTheme({
     fontSize: 14,
     h4: {
       color: "#fccc14",
+    },
+    h5: {
+      color: "#5b5c5c",
     },
     body1: {
       color: "#5b5c5c",
@@ -29,9 +33,11 @@ const theme = createTheme({
 });
 
 const Firstpage = (props) => {
-  const { HomeS, BusinessS, AboutS, CounsellingS } = useContext(UserContext);
+  const { HomeS, BusinessS, AboutS, CounsellingS, PlanningS } =
+    useContext(UserContext);
   const [Home] = HomeS;
   const [Counselling] = CounsellingS;
+  const [Planning] = PlanningS;
   const [Business] = BusinessS;
   const [About] = AboutS;
 
@@ -40,6 +46,7 @@ const Firstpage = (props) => {
       <Navbar />
       {Home ? <Homepage /> : null}
       {Counselling ? <Counsellingpage /> : null}
+      {Planning ? <Planningpage /> : null}
       {Business ? <Businesspage /> : null}
       {About ? <Aboutpage /> : null}
     </ThemeProvider>

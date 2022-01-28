@@ -4,6 +4,7 @@ export const UserContext = React.createContext("");
 const StateMan = ({ subPages }) => {
   const [Home, setHome] = useState(true);
   const [Counselling, setCounselling] = useState(false);
+  const [Planning, setPlanning] = useState(false);
   const [Business, setBusiness] = useState(false);
   const [About, setAbout] = useState(false);
   const [modal, setModal] = useState(false);
@@ -15,6 +16,7 @@ const StateMan = ({ subPages }) => {
         AboutS: [About, setAbout],
         modalS: [modal, setModal],
         CounsellingS: [Counselling, setCounselling],
+        PlanningS: [Planning, setPlanning],
       }}
     >
       {subPages}

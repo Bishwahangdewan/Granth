@@ -8,10 +8,11 @@ import TsptPNG from "../assests/TsptPNG.png";
 function Navbar(props) {
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
-  const { HomeS, CounsellingS, BusinessS, AboutS, modalS } =
+  const { HomeS, CounsellingS, PlanningS, BusinessS, AboutS, modalS } =
     useContext(UserContext);
   const [Home, setHome] = HomeS;
   const [Counselling, setCounselling] = CounsellingS;
+  const [Planning, setPlanning] = PlanningS;
   const [Business, setBusiness] = BusinessS;
   const [About, setAbout] = AboutS;
   const [modal, setModal] = modalS;
@@ -52,7 +53,7 @@ function Navbar(props) {
           style={{
             display: dropdown ? "none" : "flex",
             flexDirection: "row",
-            marginRight: "3%",
+            marginRight: "0%",
             flexWrap: "wrap",
             // border: "2px solid red",
           }}
@@ -64,6 +65,7 @@ function Navbar(props) {
               setHome(true);
               setAbout(false);
               setCounselling(false);
+              setPlanning(false);
             }}
           >
             <Typography
@@ -101,6 +103,7 @@ function Navbar(props) {
               setBusiness(false);
               setHome(false);
               setAbout(false);
+              setPlanning(false);
               setCounselling(true);
             }}
           >
@@ -114,10 +117,28 @@ function Navbar(props) {
           <div
             className="h1"
             onClick={() => {
+              setBusiness(false);
+              setHome(false);
+              setAbout(false);
+              setCounselling(false);
+              setPlanning(true);
+            }}
+          >
+            <Typography
+              className="h2"
+              style={{ color: Planning ? "#fccc14" : "#5b5c5c" }}
+            >
+              Career Planning
+            </Typography>
+          </div>
+          <div
+            className="h1"
+            onClick={() => {
               setBusiness(true);
               setHome(false);
               setAbout(false);
               setCounselling(false);
+              setPlanning(false);
             }}
           >
             <Typography
@@ -133,6 +154,7 @@ function Navbar(props) {
               setAbout(true);
               setBusiness(false);
               setHome(false);
+              setPlanning(false);
               setCounselling(false);
             }}
           >
@@ -174,6 +196,7 @@ function Navbar(props) {
             setHome(true);
             setAbout(false);
             setClick(false);
+            setPlanning(false);
             setCounselling(false);
           }}
         >
@@ -214,6 +237,7 @@ function Navbar(props) {
             setBusiness(false);
             setHome(false);
             setAbout(false);
+            setPlanning(false);
             setCounselling(true);
             setClick(false);
           }}
@@ -228,10 +252,29 @@ function Navbar(props) {
         <div
           className="h1"
           onClick={() => {
+            setBusiness(false);
+            setHome(false);
+            setAbout(false);
+            setCounselling(false);
+            setPlanning(true);
+            setClick(false);
+          }}
+        >
+          <Typography
+            className="h2"
+            style={{ color: Planning ? "#fccc14" : "#5b5c5c" }}
+          >
+            Career Planning
+          </Typography>
+        </div>
+        <div
+          className="h1"
+          onClick={() => {
             setBusiness(true);
             setHome(false);
             setAbout(false);
             setClick(false);
+            setPlanning(false);
             setCounselling(false);
           }}
         >
@@ -249,6 +292,7 @@ function Navbar(props) {
             setBusiness(false);
             setHome(false);
             setClick(false);
+            setPlanning(false);
             setCounselling(false);
           }}
         >

@@ -80,7 +80,7 @@ function TwelveSection(props) {
           size="large"
           style={{
             backgroundColor: "#fccc14",
-            paddingInline: 87,
+            width: 350,
             paddingBlock: 15,
             margin: 10,
             color: "#5b5c5c",
