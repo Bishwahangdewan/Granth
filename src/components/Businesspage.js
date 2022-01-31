@@ -198,7 +198,7 @@ function Businesspage(props) {
           </div>
         </div>
       </div>
-      <div style={{ height: 200 }}></div>
+      {/* <div style={{ height: 200 }}></div> */}
       <ModalPage />
     </div>
   );

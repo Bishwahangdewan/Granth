@@ -14,7 +14,7 @@ import { UserContext } from "./StateMan";
 function ModalPage(props) {
   const { modalS } = useContext(UserContext);
   const [modal, setModal] = modalS;
-  const [classx, setClassx] = useState("");
+  const [classx, setClassx] = useState("none");
   const [screenSize, setScreenSize] = useState(false);
 
   useEffect(() => {
@@ -109,7 +109,6 @@ function ModalPage(props) {
                 placeholder="Full Name"
                 variant="outlined"
                 style={{ margin: 10, width: "90%" }}
-                color="warning"
               />
             </div>
             <div
@@ -125,7 +124,6 @@ function ModalPage(props) {
                 placeholder="Age"
                 variant="outlined"
                 style={{ margin: 10, width: "90%" }}
-                color="warning"
               />
             </div>
           </div>
@@ -151,7 +149,6 @@ function ModalPage(props) {
                 placeholder="Enter Email Id"
                 variant="outlined"
                 style={{ margin: 10, width: "90%" }}
-                color="warning"
               />
             </div>
             <div
@@ -168,7 +165,6 @@ function ModalPage(props) {
                 variant="outlined"
                 inputProps={{ inputMode: "numeric" }}
                 style={{ margin: 10, width: "90%" }}
-                color="warning"
               />
             </div>
           </div>
@@ -193,9 +189,15 @@ function ModalPage(props) {
               <Select
                 value={classx}
                 onChange={(v) => setClassx(v.target.value)}
-                style={{ margin: 10, width: screenSize ? "90%" : "95%" }}
-                color="warning"
+                style={{
+                  margin: 10,
+                  width: screenSize ? "90%" : "95%",
+                  color: classx === "none" ? "#c4c4c4" : "black",
+                }}
               >
+                <MenuItem value="none" disabled style={{ color: "red" }}>
+                  Enter your class
+                </MenuItem>
                 <MenuItem value={6}>6th</MenuItem>
                 <MenuItem value={7}>7th</MenuItem>
                 <MenuItem value={8}>8th</MenuItem>
@@ -218,7 +220,6 @@ function ModalPage(props) {
                 Comment
               </InputLabel>
               <TextField
-                color="warning"
                 placeholder="Comment"
                 variant="outlined"
                 multiline

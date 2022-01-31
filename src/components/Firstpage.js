@@ -9,6 +9,7 @@ import Businesspage from "./Businesspage";
 import Aboutpage from "./Aboutpage";
 import Counsellingpage from "./Counsellingpage";
 import Planningpage from "./Planningpage";
+import Footer from "./Footer";
 
 const theme = createTheme({
   typography: {
@@ -25,6 +26,10 @@ const theme = createTheme({
     },
     body2: {
       color: "#5b5c5c",
+    },
+    h6: {
+      color: "white",
+      fontWeight: "bolder",
     },
   },
   // palette: {
@@ -49,6 +54,7 @@ const Firstpage = (props) => {
       {Planning ? <Planningpage /> : null}
       {Business ? <Businesspage /> : null}
       {About ? <Aboutpage /> : null}
+      <Footer />
     </ThemeProvider>
   );
 };
