@@ -10,6 +10,7 @@ import Aboutpage from "./Aboutpage";
 import Counsellingpage from "./Counsellingpage";
 import Planningpage from "./Planningpage";
 import Footer from "./Footer";
+import Workpage from "./Workpage";
 
 const theme = createTheme({
   typography: {
@@ -38,11 +39,12 @@ const theme = createTheme({
 });
 
 const Firstpage = (props) => {
-  const { HomeS, BusinessS, AboutS, CounsellingS, PlanningS } =
+  const { HomeS, BusinessS, AboutS, CounsellingS, PlanningS, HworkS } =
     useContext(UserContext);
   const [Home] = HomeS;
   const [Counselling] = CounsellingS;
   const [Planning] = PlanningS;
+  const [Hwork] = HworkS;
   const [Business] = BusinessS;
   const [About] = AboutS;
 
@@ -52,6 +54,7 @@ const Firstpage = (props) => {
       {Home ? <Homepage /> : null}
       {Counselling ? <Counsellingpage /> : null}
       {Planning ? <Planningpage /> : null}
+      {Hwork ? <Workpage /> : null}
       {Business ? <Businesspage /> : null}
       {About ? <Aboutpage /> : null}
       <Footer />

@@ -83,11 +83,12 @@ function Footer(props) {
               <Button
                 variant="contained"
                 style={{
-                  width: "40%",
+                  width: "30%",
                   backgroundColor: "#fccc14",
+                  color: "#5b5c5c",
                   padding: 10,
                   marginTop: 5,
-                  marginLeft: "10%",
+                  marginLeft: "15%",
                 }}
               >
                 Send

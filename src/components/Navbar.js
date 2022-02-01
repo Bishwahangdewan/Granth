@@ -8,11 +8,12 @@ import TsptPNG from "../assests/TsptPNG.png";
 function Navbar(props) {
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
-  const { HomeS, CounsellingS, PlanningS, BusinessS, AboutS, modalS } =
+  const { HomeS, CounsellingS, PlanningS, BusinessS, AboutS, modalS, HworkS } =
     useContext(UserContext);
   const [Home, setHome] = HomeS;
   const [Counselling, setCounselling] = CounsellingS;
   const [Planning, setPlanning] = PlanningS;
+  const [Hwork, setHwork] = HworkS;
   const [Business, setBusiness] = BusinessS;
   const [About, setAbout] = AboutS;
   const [modal, setModal] = modalS;
@@ -28,7 +29,7 @@ function Navbar(props) {
     else setDropdown(false);
   }, []);
   return (
-    <div>
+    <div style={{ marginTop: 10 }}>
       <header className="header">
         <div
           style={{
@@ -66,6 +67,7 @@ function Navbar(props) {
               setAbout(false);
               setCounselling(false);
               setPlanning(false);
+              setHwork(false);
             }}
           >
             <Typography
@@ -75,28 +77,6 @@ function Navbar(props) {
               Home
             </Typography>
           </div>
-          {/* <div
-            className="h1"
-            onClick={async () => {
-              await setBusiness(false);
-              await setHome(true);
-              await setAbout(false);
-              await document.querySelector("#tenthSection").scrollIntoView();
-            }}
-          >
-            <Typography className="h2">9th-10th</Typography>
-          </div>
-          <div
-            className="h1"
-            onClick={async () => {
-              await setBusiness(false);
-              await setHome(true);
-              await setAbout(false);
-              await document.querySelector("#twelveSection").scrollIntoView();
-            }}
-          >
-            <Typography className="h2">11th-12th</Typography>
-          </div> */}
           <div
             className="h1"
             onClick={() => {
@@ -105,6 +85,7 @@ function Navbar(props) {
               setAbout(false);
               setPlanning(false);
               setCounselling(true);
+              setHwork(false);
             }}
           >
             <Typography
@@ -122,6 +103,7 @@ function Navbar(props) {
               setAbout(false);
               setCounselling(false);
               setPlanning(true);
+              setHwork(false);
             }}
           >
             <Typography
@@ -134,11 +116,30 @@ function Navbar(props) {
           <div
             className="h1"
             onClick={() => {
+              setBusiness(false);
+              setHome(false);
+              setAbout(false);
+              setCounselling(false);
+              setPlanning(false);
+              setHwork(true);
+            }}
+          >
+            <Typography
+              className="h2"
+              style={{ color: Hwork ? "#fccc14" : "#5b5c5c" }}
+            >
+              How It Works
+            </Typography>
+          </div>
+          <div
+            className="h1"
+            onClick={() => {
               setBusiness(true);
               setHome(false);
               setAbout(false);
               setCounselling(false);
               setPlanning(false);
+              setHwork(false);
             }}
           >
             <Typography
@@ -156,6 +157,7 @@ function Navbar(props) {
               setHome(false);
               setPlanning(false);
               setCounselling(false);
+              setHwork(false);
             }}
           >
             <Typography
@@ -198,6 +200,7 @@ function Navbar(props) {
             setClick(false);
             setPlanning(false);
             setCounselling(false);
+            setHwork(false);
           }}
         >
           <Typography
@@ -207,30 +210,6 @@ function Navbar(props) {
             Home
           </Typography>
         </div>
-        {/* <div
-          className="h1"
-          onClick={async () => {
-            await setBusiness(false);
-            await setHome(true);
-            await setAbout(false);
-            await document.querySelector("#tenthSection").scrollIntoView();
-            setClick(false);
-          }}
-        >
-          <Typography className="h2">9th-10th</Typography>
-        </div>
-        <div
-          className="h1"
-          onClick={async () => {
-            await setBusiness(false);
-            await setHome(true);
-            await setAbout(false);
-            await document.querySelector("#twelveSection").scrollIntoView();
-            setClick(false);
-          }}
-        >
-          <Typography className="h2">11th-12th</Typography>
-        </div> */}
         <div
           className="h1"
           onClick={() => {
@@ -240,6 +219,7 @@ function Navbar(props) {
             setPlanning(false);
             setCounselling(true);
             setClick(false);
+            setHwork(false);
           }}
         >
           <Typography
@@ -258,6 +238,7 @@ function Navbar(props) {
             setCounselling(false);
             setPlanning(true);
             setClick(false);
+            setHwork(false);
           }}
         >
           <Typography
@@ -270,12 +251,32 @@ function Navbar(props) {
         <div
           className="h1"
           onClick={() => {
+            setBusiness(false);
+            setHome(false);
+            setAbout(false);
+            setCounselling(false);
+            setPlanning(false);
+            setClick(false);
+            setHwork(true);
+          }}
+        >
+          <Typography
+            className="h2"
+            style={{ color: Hwork ? "#fccc14" : "#5b5c5c" }}
+          >
+            How It Works
+          </Typography>
+        </div>
+        <div
+          className="h1"
+          onClick={() => {
             setBusiness(true);
             setHome(false);
             setAbout(false);
             setClick(false);
             setPlanning(false);
             setCounselling(false);
+            setHwork(false);
           }}
         >
           <Typography
@@ -294,6 +295,7 @@ function Navbar(props) {
             setClick(false);
             setPlanning(false);
             setCounselling(false);
+            setHwork(false);
           }}
         >
           <Typography
