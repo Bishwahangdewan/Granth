@@ -136,69 +136,6 @@ function Businesspage(props) {
           </div>
         </div>
       </div>
-      <div
-        style={{
-          backgroundImage: `url(
-            "https://d33wubrfki0l68.cloudfront.net/9fdd75375aebec15f50bbc3240dab3f5b3782e2f/0e955/static/media/bottom.7da81cb8.svg"
-          )`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "50%",
-          position: "relative",
-          marginTop: 100,
-          height: 220,
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            paddingTop: 30,
-            color: "white",
-            padding: 15,
-            // border: "2px solid black",
-          }}
-        >
-          <Typography variant="h4" style={{ color: "white" }}>
-            To know more, contact us at
-          </Typography>
-          <div
-            style={{
-              margin: 8,
-              //   border: "2px solid black",
-              width: 400,
-              display: "flex",
-              justifyContent: "space-evenly",
-              flexWrap: "wrap",
-              marginTop: 25,
-            }}
-          >
-            <Button
-              style={{
-                backgroundColor: "white",
-                color: "#5b5c5c",
-                padding: 12,
-                paddingInline: 30,
-              }}
-            >
-              9892152606
-            </Button>
-            <Button
-              style={{
-                backgroundColor: "white",
-                color: "#5b5c5c",
-                padding: 12,
-                paddingInline: 30,
-              }}
-            >
-              cascas@xyz
-            </Button>
-          </div>
-        </div>
-      </div>
-      {/* <div style={{ height: 200 }}></div> */}
       <ModalPage />
     </div>
   );

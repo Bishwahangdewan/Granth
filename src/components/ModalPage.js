@@ -46,9 +46,9 @@ function ModalPage(props) {
     if (name === "") {
       setVName("Enter Full name");
     }
-    if (age === "") {
-      setVAge("Enter your age");
-    }
+    // if (age === "") {
+    //   setVAge("Enter your age");
+    // }
     if (email === "") {
       setVEmail("Enter your email id");
     }
@@ -60,7 +60,7 @@ function ModalPage(props) {
     }
     if (
       name !== "" &&
-      age !== "" &&
+      // age !== "" &&
       email !== "" &&
       number !== "" &&
       classx !== "none"
@@ -103,7 +103,9 @@ function ModalPage(props) {
             justifyContent: "center",
             // flexWrap: "wrap",
             width: "55%",
+            // height: 600,
             borderRadius: 30,
+            // overflow: "scroll",
           }}
         >
           <div
@@ -124,7 +126,7 @@ function ModalPage(props) {
                 color: "#5b5c5c",
               }}
             >
-              Book a Free Session
+              Book a Pre Counselling Session for Free
             </Typography>
             <Button
               onClick={() => setModal(false)}
@@ -153,9 +155,16 @@ function ModalPage(props) {
                 width: screenSize ? "100%" : "40%",
               }}
             >
-              <InputLabel style={{ margin: 10, marginBottom: 0 }}>
-                Full Name
-              </InputLabel>
+              <div style={{ display: "flex" }}>
+                <InputLabel style={{ marginBottom: 0, color: "red" }}>
+                  *
+                </InputLabel>
+                <InputLabel
+                  style={{ margin: 10, marginBottom: 0, marginLeft: 4 }}
+                >
+                  Full Name
+                </InputLabel>
+              </div>
               <TextField
                 placeholder="Full Name"
                 variant="outlined"
@@ -179,9 +188,16 @@ function ModalPage(props) {
                 width: screenSize ? "100%" : "40%",
               }}
             >
-              <InputLabel style={{ margin: 10, marginBottom: 0 }}>
-                Age
-              </InputLabel>
+              <div style={{ display: "flex" }}>
+                {/* <InputLabel style={{ marginBottom: 0, color: "red" }}>
+                  *
+                </InputLabel> */}
+                <InputLabel
+                  style={{ margin: 10, marginBottom: 0, marginLeft: 12 }}
+                >
+                  Age
+                </InputLabel>
+              </div>
               <TextField
                 placeholder="Age"
                 variant="outlined"
@@ -215,9 +231,16 @@ function ModalPage(props) {
                 // border: "2px solid red",
               }}
             >
-              <InputLabel style={{ margin: 10, marginBottom: 0 }}>
-                Email Id
-              </InputLabel>
+              <div style={{ display: "flex" }}>
+                <InputLabel style={{ marginBottom: 0, color: "red" }}>
+                  *
+                </InputLabel>
+                <InputLabel
+                  style={{ margin: 10, marginBottom: 0, marginLeft: 4 }}
+                >
+                  Email id
+                </InputLabel>
+              </div>
               <TextField
                 placeholder="Enter Email Id"
                 variant="outlined"
@@ -241,9 +264,16 @@ function ModalPage(props) {
                 // border: "2px solid red",
               }}
             >
-              <InputLabel style={{ margin: 10, marginBottom: 0 }}>
-                Phone Number
-              </InputLabel>
+              <div style={{ display: "flex" }}>
+                <InputLabel style={{ marginBottom: 0, color: "red" }}>
+                  *
+                </InputLabel>
+                <InputLabel
+                  style={{ margin: 10, marginBottom: 0, marginLeft: 4 }}
+                >
+                  Phone number
+                </InputLabel>
+              </div>
               <TextField
                 placeholder="Phone Number"
                 variant="outlined"
@@ -278,9 +308,16 @@ function ModalPage(props) {
                 width: screenSize ? "100%" : "81%",
               }}
             >
-              <InputLabel style={{ margin: 10, marginBottom: 0 }}>
-                Class
-              </InputLabel>
+              <div style={{ display: "flex" }}>
+                <InputLabel style={{ marginBottom: 0, color: "red" }}>
+                  *
+                </InputLabel>
+                <InputLabel
+                  style={{ margin: 10, marginBottom: 0, marginLeft: 4 }}
+                >
+                  Class
+                </InputLabel>
+              </div>
               <TextField
                 select
                 error={Vclassx === "none" ? "" : Vclassx}
@@ -294,10 +331,14 @@ function ModalPage(props) {
                   }
                   setClassx(v.target.value);
                 }}
+                InputProps={{
+                  style: {
+                    color: classx === "none" ? "#aaaaaa" : "black",
+                  },
+                }}
                 style={{
                   margin: 10,
                   width: screenSize ? "90%" : "95%",
-                  color: classx === "none" ? "#c4c4c4" : "black",
                 }}
               >
                 <MenuItem value="none" disabled style={{ color: "red" }}>
@@ -322,7 +363,7 @@ function ModalPage(props) {
           >
             <div style={{ width: screenSize ? "100%" : "81%" }}>
               <InputLabel style={{ margin: 10, marginBottom: 0 }}>
-                Comment
+                Problem that you are facing
               </InputLabel>
               <TextField
                 placeholder="Comment"
@@ -346,7 +387,12 @@ function ModalPage(props) {
           >
             <Button
               variant="contained"
-              style={{ width: "40%", backgroundColor: "#fccc14", padding: 10 }}
+              style={{
+                width: "40%",
+                backgroundColor: "#fccc14",
+                padding: 10,
+                color: "black",
+              }}
               onClick={() => {
                 handleSubmit();
               }}

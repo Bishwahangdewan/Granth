@@ -92,7 +92,7 @@ function Navbar(props) {
               className="h2"
               style={{ color: Counselling ? "#fccc14" : "#5b5c5c" }}
             >
-              Career Counselling
+              Career Assessment
             </Typography>
           </div>
           <div
@@ -226,7 +226,7 @@ function Navbar(props) {
             className="h2"
             style={{ color: Counselling ? "#fccc14" : "#5b5c5c" }}
           >
-            Career Counselling
+            Career Assessment
           </Typography>
         </div>
         <div

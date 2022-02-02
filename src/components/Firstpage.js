@@ -29,7 +29,7 @@ const theme = createTheme({
       color: "#5b5c5c",
     },
     h6: {
-      color: "white",
+      color: "black",
       fontWeight: "bolder",
     },
   },

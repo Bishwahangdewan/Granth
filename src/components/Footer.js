@@ -5,12 +5,12 @@ import React, { useState } from "react";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import YouTubeIcon from "@mui/icons-material/YouTube";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 function Footer(props) {
   const [Interest, setInterest] = useState("none");
   return (
-    <div style={{ backgroundColor: "#ffde5e" }}>
+    <div style={{ backgroundColor: "#ffde5e", marginTop: 60 }}>
       <div
         style={{
           display: "flex",
@@ -27,21 +27,26 @@ function Footer(props) {
         >
           <Typography variant="h6">About Us</Typography>
           <Typography>
-            Ad exercitation et adipisicing excepteur esse sunt veniam voluptate
-            labore sint.
+            It is an education platform that offers career counselling and
+            guidance. It consists of all the curated options for careers that
+            can be explored by any individual. These options are elucidated to
+            personnel seeking career advice based on their interests or merits
+            or even when they feel they are unclear. Granth has counselors who
+            are well versed in guiding and understanding the students’
+            personality.
           </Typography>
         </div>
         <div
           style={{
             width: 400,
-            //  border: "2px solid red"
+            // border: "2px solid red",
           }}
         >
           <Typography variant="h6">Contact Us</Typography>
           <div style={{ padding: 5 }}>
             <div style={{ display: "flex", padding: 5 }}>
               <PhoneEnabledIcon />
-              <Typography style={{ marginLeft: 5 }}> +91-9895125225</Typography>
+              <Typography style={{ marginLeft: 5 }}> +91-9389600390</Typography>
             </div>
             <div style={{ display: "flex", padding: 5 }}>
               <MailIcon />
@@ -99,15 +104,15 @@ function Footer(props) {
         <div
           style={{
             width: 400,
-            // border: "2px solid red"
+            // border: "2px solid red",
           }}
         >
-          <Typography variant="h6">Social | Partners | Carrers in</Typography>
+          <Typography variant="h6">Connect Socially</Typography>
           <div style={{ display: "flex", padding: 10 }}>
             <FacebookIcon style={{ marginLeft: 8, fontSize: 40 }} />
             <TwitterIcon style={{ marginLeft: 8, fontSize: 40 }} />
+            <LinkedInIcon style={{ marginLeft: 8, fontSize: 40 }} />
             <InstagramIcon style={{ marginLeft: 8, fontSize: 40 }} />
-            <YouTubeIcon style={{ marginLeft: 8, fontSize: 40 }} />
           </div>
         </div>
       </div>

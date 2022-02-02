@@ -1,5 +1,6 @@
 import { Typography } from "@mui/material";
 import React from "react";
+import councelimg from "../assests/brainstorm-meeting.jpg";
 
 import ModalPage from "./ModalPage";
 
@@ -224,7 +225,7 @@ function Counsellingpage(props) {
         </div>
         <div>
           <img
-            src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            src={councelimg}
             height="350px"
             width="400px"
             style={{ margin: 25 }}
