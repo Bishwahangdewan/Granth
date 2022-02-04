@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Typography, Button } from "@mui/material";
 import { UserContext } from "./StateMan";
-import twelveimg from "../assests/Work_6.jpg";
+import twelveimg from "../assests/img11-12.png";
 
 function TwelveSection(props) {
   const { modalS, screenSizeS } = useContext(UserContext);
@@ -24,7 +24,7 @@ function TwelveSection(props) {
     >
       {screenSize ? null : (
         <div style={{ display: "flex", flexWrap: "wrap" }}>
-          <img src={twelveimg} height="500px" width="500px" alt="" />
+          <img src={twelveimg} height="400px" width="500px" alt="" />
         </div>
       )}
       <div
@@ -55,7 +55,14 @@ function TwelveSection(props) {
           <Typography style={{ marginTop: 3 }}>
             What is it that you want to do?
           </Typography>
-          <Typography style={{ marginTop: 5, color: "#fccc14", fontSize: 19 }}>
+          <Typography
+            style={{
+              marginTop: 5,
+              color: "#fccc14",
+              fontSize: 19,
+              fontWeight: "bolder",
+            }}
+          >
             Get the right advice from the experts who can guide you make an
             informative decision
           </Typography>
@@ -85,21 +92,23 @@ function TwelveSection(props) {
             </Typography>
           </li>
         </ul>
-        <Button
-          variant="contained"
-          size="large"
-          style={{
-            backgroundColor: "#fccc14",
-            width: 350,
-            paddingBlock: 15,
-            margin: 10,
-            color: "#5b5c5c",
-            marginLeft: 0,
-          }}
-          onClick={() => setModal(true)}
-        >
-          Book Now For 11th-12th
-        </Button>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <Button
+            variant="contained"
+            size="large"
+            style={{
+              backgroundColor: "#fccc14",
+              width: 350,
+              paddingBlock: 15,
+              margin: 10,
+              color: "#5b5c5c",
+              marginLeft: 0,
+            }}
+            onClick={() => setModal(true)}
+          >
+            Book Now For 11th-12th
+          </Button>
+        </div>
       </div>
       {screenSize ? (
         <div style={{ display: "flex", flexWrap: "wrap" }}>

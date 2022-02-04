@@ -1,6 +1,10 @@
 import { Typography } from "@mui/material";
 import React from "react";
 import ModalPage from "./ModalPage";
+import about1 from "../assests/about1.png";
+import about2 from "../assests/about2.png";
+import about3 from "../assests/about3.png";
+import about4 from "../assests/about4.png";
 
 function Aboutpage(props) {
   return (
@@ -29,12 +33,12 @@ function Aboutpage(props) {
             variant="h4"
             style={{ fontWeight: "bold", color: "white" }}
           >
-            We are xyz
+            ABOUT GRANTH
           </Typography>
-          <Typography style={{ marginTop: 10 }}>
+          {/* <Typography style={{ marginTop: 10 }}>
             We make teacher & student’s life simpler, more pleasant and more
             productive.
-          </Typography>
+          </Typography> */}
         </div>
         <div
           style={{
@@ -52,7 +56,7 @@ function Aboutpage(props) {
               variant="h4"
               style={{ fontWeight: "bolder", marginBottom: 20 }}
             >
-              About xyz
+              About Granth
             </Typography>
             <Typography style={{ marginBottom: 10 }}>
               By the time children reach Class 8, they are talking about
@@ -76,12 +80,7 @@ function Aboutpage(props) {
             </Typography>
           </div>
           <div>
-            <img
-              src="https://edvi.app/static/media/blog.febe592a.svg"
-              height="400px"
-              width="100%"
-              alt=""
-            />
+            <img src={about1} height="400px" width="100%" alt="" />
           </div>
         </div>
       </div>
@@ -98,12 +97,7 @@ function Aboutpage(props) {
         }}
       >
         <div>
-          <img
-            src="https://edvi.app/static/media/our-model.f0d36a90.webp"
-            height="400px"
-            width="100%"
-            alt=""
-          />
+          <img src={about2} height="400px" width="100%" alt="" />
         </div>
         <div style={{ width: 600, marginTop: 20 }}>
           {/* <Typography
@@ -162,12 +156,7 @@ function Aboutpage(props) {
           </Typography>
         </div>
         <div>
-          <img
-            src="https://edvi.app/static/media/blog.febe592a.svg"
-            height="400px"
-            width="100%"
-            alt=""
-          />
+          <img src={about3} height="400px" width="100%" alt="" />
         </div>
       </div>
       <div
@@ -183,12 +172,7 @@ function Aboutpage(props) {
         }}
       >
         <div>
-          <img
-            src="https://edvi.app/static/media/our-model.f0d36a90.webp"
-            height="400px"
-            width="100%"
-            alt=""
-          />
+          <img src={about4} height="400px" width="100%" alt="" />
         </div>
         <div style={{ width: 600, marginTop: 20 }}>
           {/* <Typography

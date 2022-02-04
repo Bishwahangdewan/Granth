@@ -28,7 +28,9 @@ function Footer(props) {
             // , border: "2px solid red"
           }}
         >
-          <Typography variant="h6">About Us</Typography>
+          <Typography variant="h6" style={{ textAlign: "center" }}>
+            About Us
+          </Typography>
           <Typography>
             It is an education platform that offers career counselling and
             guidance. It consists of all the curated options for careers that
@@ -44,18 +46,34 @@ function Footer(props) {
             style={{
               width: 400,
               // border: "2px solid red",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              padding: 10,
             }}
           >
             <Typography variant="h6">Contact Us</Typography>
             <div style={{ padding: 5 }}>
-              <div style={{ display: "flex", padding: 5 }}>
+              <div
+                style={{
+                  display: "flex",
+                  padding: 5,
+                  justifyContent: "center",
+                }}
+              >
                 <PhoneEnabledIcon />
                 <Typography style={{ marginLeft: 5 }}>
                   {" "}
                   +91-9389600390
                 </Typography>
               </div>
-              <div style={{ display: "flex", padding: 5 }}>
+              <div
+                style={{
+                  display: "flex",
+                  padding: 5,
+                  justifyContent: "center",
+                }}
+              >
                 <MailIcon />
                 <Typography style={{ marginLeft: 5 }}>
                   {" "}
@@ -65,11 +83,11 @@ function Footer(props) {
               <div style={{ display: "flex", flexDirection: "column" }}>
                 <TextField
                   placeholder="Email"
-                  style={{ width: "60%", marginTop: 5, color: "red" }}
+                  style={{ width: "100%", marginTop: 5, color: "red" }}
                 />
                 <TextField
                   placeholder="Phone number"
-                  style={{ width: "60%", marginTop: 5 }}
+                  style={{ width: "100%", marginTop: 5 }}
                 />
                 <TextField
                   select
@@ -78,7 +96,7 @@ function Footer(props) {
                   InputProps={{
                     style: {
                       color: Interest === "none" ? "#b18d27" : "black",
-                      width: "60%",
+                      width: "100%",
                       marginTop: 5,
                     },
                   }}
@@ -100,7 +118,7 @@ function Footer(props) {
                     color: "#5b5c5c",
                     padding: 10,
                     marginTop: 5,
-                    marginLeft: "15%",
+                    marginLeft: "35%",
                   }}
                 >
                   Send
@@ -115,8 +133,8 @@ function Footer(props) {
               // border: "2px solid red",
               display: "flex",
               flexDirection: "column",
-              marginLeft: 70,
-              // alignItems: "center",
+              // marginLeft: 70,
+              alignItems: "center",
             }}
           >
             <Typography variant="h6">Contact Us</Typography>
@@ -125,7 +143,7 @@ function Footer(props) {
                 style={{
                   display: "flex",
                   padding: 5,
-                  // justifyContent: "center",
+                  justifyContent: "center",
                 }}
               >
                 <PhoneEnabledIcon />
@@ -138,7 +156,7 @@ function Footer(props) {
                 style={{
                   display: "flex",
                   padding: 5,
-                  // justifyContent: "center",
+                  justifyContent: "center",
                 }}
               >
                 <MailIcon />
@@ -207,6 +225,7 @@ function Footer(props) {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            padding: 10,
           }}
         >
           <Typography variant="h6">Connect Socially</Typography>

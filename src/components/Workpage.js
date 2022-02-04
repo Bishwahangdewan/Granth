@@ -1,6 +1,10 @@
 import React from "react";
 import { Typography } from "@mui/material";
 import ModalPage from "./ModalPage";
+import scene1 from "../assests/scene1.png";
+import scene2 from "../assests/scene2.png";
+import scene3 from "../assests/scene3.png";
+import scene4 from "../assests/scene4.png";
 
 function Workpage(props) {
   return (
@@ -25,12 +29,12 @@ function Workpage(props) {
         }}
       >
         <Typography variant="h4" style={{ fontWeight: "bold", color: "white" }}>
-          We are xyz
+          How Does Granth Work?
         </Typography>
-        <Typography style={{ marginTop: 10 }}>
+        {/* <Typography style={{ marginTop: 10 }}>
           We make teacher & student’s life simpler, more pleasant and more
           productive.
-        </Typography>
+        </Typography> */}
       </div>
       <div
         style={{
@@ -50,21 +54,21 @@ function Workpage(props) {
             width: "80%",
           }}
         >
-          <Typography variant="h4">How Does Granth Work?</Typography>
+          {/* <Typography variant="h4">How Does Granth Work?</Typography> */}
           <Typography variant="h6" style={{ color: "#5b5c5c", marginTop: 10 }}>
             Career planning is a 4 stage process at Granth. Each stage
             constructs a framework to understand individuals' passion, interest,
             personality, aptitude, culture, and career-related goals.
           </Typography>
         </div>
-        <div style={{ marginTop: 30 }}>
+        {/* <div style={{ marginTop: 30 }}>
           <img
             src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             height="500px"
             width="100%"
             alt=""
           />
-        </div>
+        </div> */}
       </div>
       <div
         style={{
@@ -93,12 +97,7 @@ function Workpage(props) {
           </Typography>
         </div>
         <div>
-          <img
-            src="https://edvi.app/static/media/blog.febe592a.svg"
-            height="400px"
-            width="100%"
-            alt=""
-          />
+          <img src={scene1} height="400px" width="100%" alt="" />
         </div>
       </div>
       <div
@@ -113,12 +112,7 @@ function Workpage(props) {
         }}
       >
         <div>
-          <img
-            src="https://edvi.app/static/media/blog.febe592a.svg"
-            height="400px"
-            width="100%"
-            alt=""
-          />
+          <img src={scene2} height="400px" width="100%" alt="" />
         </div>
         <div style={{ width: 600 }}>
           <Typography
@@ -212,12 +206,7 @@ function Workpage(props) {
           </Typography>
         </div>
         <div>
-          <img
-            src="https://edvi.app/static/media/blog.febe592a.svg"
-            height="400px"
-            width="100%"
-            alt=""
-          />
+          <img src={scene3} height="400px" width="100%" alt="" />
         </div>
       </div>
       <div
@@ -232,12 +221,7 @@ function Workpage(props) {
         }}
       >
         <div>
-          <img
-            src="https://edvi.app/static/media/blog.febe592a.svg"
-            height="400px"
-            width="100%"
-            alt=""
-          />
+          <img src={scene4} height="400px" width="100%" alt="" />
         </div>
         <div style={{ width: 600 }}>
           <Typography

@@ -29,12 +29,12 @@ function Businesspage(props) {
         }}
       >
         <Typography variant="h4" style={{ fontWeight: "bold", color: "white" }}>
-          We are xyz
+          WELCOME
         </Typography>
-        <Typography style={{ marginTop: 10 }}>
+        {/* <Typography style={{ marginTop: 10 }}>
           We make teacher & student’s life simpler, more pleasant and more
           productive.
-        </Typography>
+        </Typography> */}
       </div>
       <div
         style={{

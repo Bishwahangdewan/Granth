@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Typography, Button } from "@mui/material";
 import { UserContext } from "./StateMan";
-import tenthimg from "../assests/6487.jpg";
+import tenthimg from "../assests/img9-10.png";
 
 function TenthSection(props) {
   const { modalS } = useContext(UserContext);
@@ -47,7 +47,14 @@ function TenthSection(props) {
             Don’t worry it’s not mind-boggling
           </Typography>
           <Typography style={{ marginTop: 3 }}>Leave it to us......</Typography>
-          <Typography style={{ marginTop: 5, color: "#fccc14", fontSize: 19 }}>
+          <Typography
+            style={{
+              marginTop: 5,
+              color: "#fccc14",
+              fontSize: 19,
+              fontWeight: "bolder",
+            }}
+          >
             Get the right advice from the experts who can guide you make an
             informative decision
           </Typography>
@@ -73,7 +80,7 @@ function TenthSection(props) {
             <Typography>Answer all your inquisitiveness</Typography>
           </li>
         </ul>
-        <div>
+        <div style={{ display: "flex", justifyContent: "center" }}>
           <Button
             variant="contained"
             size="large"
@@ -92,7 +99,7 @@ function TenthSection(props) {
         </div>
       </div>
       <div style={{ display: "flex", flexWrap: "wrap" }}>
-        <img src={tenthimg} height="500px" width="500px" alt="" />
+        <img src={tenthimg} height="400px" width="500px" alt="" />
       </div>
       <div style={{ display: "none" }}>{modal}</div>
     </div>
