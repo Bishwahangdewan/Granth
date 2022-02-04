@@ -1,5 +1,5 @@
 import React from "react";
-import ComicStripSection from "./ComicStripSection";
+// import ComicStripSection from "./ComicStripSection";
 import ModalPage from "./ModalPage";
 import Section1 from "./Section1";
 import TenthSection from "./TenthSection";
@@ -9,7 +9,7 @@ function Homepage(props) {
   return (
     <div style={{ marginTop: 10 }}>
       <Section1 />
-      <ComicStripSection />
+      {/* <ComicStripSection /> */}
       <TenthSection />
       <TwelveSection />
       <ModalPage />

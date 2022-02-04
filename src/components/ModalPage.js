@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import {
   Button,
@@ -12,9 +12,9 @@ import { UserContext } from "./StateMan";
 import firebase from "../Firebase";
 
 function ModalPage(props) {
-  const { modalS } = useContext(UserContext);
+  const { modalS, screenSizeS } = useContext(UserContext);
   const [modal, setModal] = modalS;
-  const [screenSize, setScreenSize] = useState(false);
+  const [screenSize] = screenSizeS;
 
   const [name, setName] = useState("");
   const [Vname, setVName] = useState("");
@@ -30,25 +30,13 @@ function ModalPage(props) {
 
   const db = firebase.firestore();
 
-  useEffect(() => {
-    if (window.innerWidth < 600) {
-      setScreenSize(true);
-    } else setScreenSize(false);
-  }, []);
-
-  window.addEventListener("resize", () => Resize());
-  const Resize = () => {
-    if (window.innerWidth < 600) setScreenSize(true);
-    else setScreenSize(false);
-  };
-
   const handleSubmit = () => {
     if (name === "") {
       setVName("Enter Full name");
     }
-    // if (age === "") {
-    //   setVAge("Enter your age");
-    // }
+    if (age === "") {
+      setVAge("Enter your age");
+    }
     if (email === "") {
       setVEmail("Enter your email id");
     }
@@ -60,7 +48,7 @@ function ModalPage(props) {
     }
     if (
       name !== "" &&
-      // age !== "" &&
+      age !== "" &&
       email !== "" &&
       number !== "" &&
       classx !== "none"
@@ -189,9 +177,9 @@ function ModalPage(props) {
               }}
             >
               <div style={{ display: "flex" }}>
-                {/* <InputLabel style={{ marginBottom: 0, color: "red" }}>
+                <InputLabel style={{ marginBottom: 0, color: "red" }}>
                   *
-                </InputLabel> */}
+                </InputLabel>
                 <InputLabel
                   style={{ margin: 10, marginBottom: 0, marginLeft: 12 }}
                 >

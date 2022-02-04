@@ -7,10 +7,38 @@ function Planningpage(props) {
     <div style={{ marginTop: 35 }}>
       <div
         style={{
+          backgroundImage: `url(
+            "https://d33wubrfki0l68.cloudfront.net/static/media/18ffdfbe225ba547a6fcd93cba102639a48ccbe4/dots.68433c53.png"
+          )`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "contain",
+          backgroundColor: "#fccc14",
+          marginTop: 20,
+          height: 250,
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
+          color: "white",
+          flexWrap: "wrap",
+          padding: 15,
+        }}
+      >
+        <Typography variant="h4" style={{ fontWeight: "bold", color: "white" }}>
+          We are xyz
+        </Typography>
+        <Typography style={{ marginTop: 10 }}>
+          We make teacher & student’s life simpler, more pleasant and more
+          productive.
+        </Typography>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: 100,
         }}
       >
         <div

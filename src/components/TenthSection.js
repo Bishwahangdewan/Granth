@@ -15,7 +15,7 @@ function TenthSection(props) {
         alignItems: "center",
         // border: "2px solid red",
         margin: 15,
-        marginTop: 30,
+        marginTop: 60,
         flexWrap: "wrap",
         padding: 8,
       }}
@@ -33,15 +33,26 @@ function TenthSection(props) {
         <Typography variant="h4" style={{ fontWeight: "bold" }}>
           Class 9 - Class 10
         </Typography>
-        <div style={{ paddingBlock: 25 }}>
-          <Typography style={{ marginTop: 10, fontSize: 20 }}>
-            Are you geared up to choose the right subject? Do you know the right
-            skill set for you? Can you create the right concoction of subjects?
+        <div>
+          <Typography style={{ marginTop: 10 }}>
+            Are you geared up to choose the right subject?
+          </Typography>
+          <Typography style={{ marginTop: 3 }}>
+            Do you know the right skill set for you?
+          </Typography>
+          <Typography style={{ marginTop: 3 }}>
+            Can you create the right concoction of subjects?
+          </Typography>
+          <Typography style={{ marginTop: 3 }}>
             Don’t worry it’s not mind-boggling
           </Typography>
-          <Typography style={{ fontSize: 20 }}>Leave it to us......</Typography>
+          <Typography style={{ marginTop: 3 }}>Leave it to us......</Typography>
+          <Typography style={{ marginTop: 5, color: "#fccc14", fontSize: 19 }}>
+            Get the right advice from the experts who can guide you make an
+            informative decision
+          </Typography>
         </div>
-        {/* <ul>
+        <ul>
           <li>
             <Typography>
               We’ll help you understand your area of interest
@@ -61,7 +72,7 @@ function TenthSection(props) {
           <li>
             <Typography>Answer all your inquisitiveness</Typography>
           </li>
-        </ul> */}
+        </ul>
         <div>
           <Button
             variant="contained"

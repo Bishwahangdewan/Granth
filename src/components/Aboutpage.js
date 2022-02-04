@@ -55,19 +55,24 @@ function Aboutpage(props) {
               About xyz
             </Typography>
             <Typography style={{ marginBottom: 10 }}>
-              Commodo dolor nisi enim anim non sit ullamco aliqua. Reprehenderit
-              elit ex non quis elit elit laborum. Anim laboris quis deserunt
-              pariatur mollit ad duis proident culpa nostrud eu enim occaecat
-              officia. Lorem eu cillum ad exercitation.
+              By the time children reach Class 8, they are talking about
+              choosing subjects and how to attain their career goal. Some start
+              way early and some are still figuring out. They start discussing
+              their goals with parents, friends, peers, teachers and other
+              elders who can guide them to the right path.
             </Typography>
             <Typography style={{ marginBottom: 10 }}>
-              Cupidatat consequat veniam dolore sunt occaecat duis ullamco
-              reprehenderit qui in dolor. Reprehenderit in est proident veniam.
-              Aute velit eu eu occaecat ex esse reprehenderit in culpa dolor
-              sunt duis. Amet sunt enim cillum aliquip mollit qui enim.
-              Incididunt commodo id excepteur velit enim nostrud deserunt nisi
-              officia eiusmod id incididunt cillum elit. Qui sunt consectetur
-              fugiat aliqua qui nisi.
+              We have seen a major drop out of students from Indian colleges and
+              starting their own venture. Although it’s a separate debate
+              altogether, it shows that children are just unaware about
+              themselves till they reach college and figure out that this is not
+              their calling. You see students taking science in Class 11 & 12,
+              as a safer choice of subject to pursue a wide range of career
+              options in case engineering doesn’t work out for them. There are
+              also some students who change their stream of subjects in class 12
+              because they could not score well in class 11. There are some who
+              take entrance tests multiple times in order to prove something to
+              others.
             </Typography>
           </div>
           <div>
@@ -101,32 +106,120 @@ function Aboutpage(props) {
           />
         </div>
         <div style={{ width: 600, marginTop: 20 }}>
-          <Typography
+          {/* <Typography
             variant="h4"
             style={{ fontWeight: "bolder", marginBottom: 20 }}
           >
             Our model
-          </Typography>
+          </Typography> */}
           <Typography style={{ marginBottom: 20 }}>
-            Ea incididunt commodo laboris irure duis duis sint eu aliquip non.
-            Elit eiusmod sit velit aute cupidatat. Aliqua deserunt nulla elit
-            dolore cupidatat. Pariatur magna magna amet labore laborum minim
-            sunt duis aute nostrud. Pariatur ea ullamco officia adipisicing
-            adipisicing excepteur ut.
+            We have a high probability of such cases where an individual just
+            does not know what they should pursue? What career option will have
+            them content?
           </Typography>
           <Typography style={{ marginBottom: 10 }}>
-            Est nulla et nostrud do sit deserunt sit pariatur incididunt minim.
-            Esse deserunt laboris sunt exercitation nostrud ut id mollit Lorem
-            deserunt. Duis id esse nostrud ipsum id esse id adipisicing
-            incididunt non sint ad. Do aute nisi id non eu id voluptate. Labore
-            ad magna amet non labore occaecat dolore elit nulla consectetur
-            tempor aliquip exercitation. Pariatur eu dolore anim anim tempor
-            incididunt officia consectetur id anim Lorem ex velit ullamco.
+            With just 3 streams and more than hundreds of graduation courses and
+            thousands of multiple career options, it’s difficult to choose just
+            the right career option for the next 30-40 years, that’ll keep you
+            going.
           </Typography>
         </div>
       </div>
-
-      {/* <div style={{ height: 200 }}></div> */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-evenly",
+          alignItems: "center",
+          marginTop: 30,
+          flexWrap: "wrap",
+          padding: 15,
+          // border: "2px solid red",
+        }}
+      >
+        <div style={{ width: 600 }}>
+          {/* <Typography
+            variant="h4"
+            style={{ fontWeight: "bolder", marginBottom: 20 }}
+          >
+            About xyz
+          </Typography> */}
+          <Typography style={{ marginBottom: 10 }}>
+            That’s what Granth is all about. It is an education platform that
+            offers career counselling and guidance. It consists of all the
+            curated options for careers that can be explored by any individual.
+            These options are elucidated to personnel seeking career advice
+            based on their interests or merits or even when they feel they are
+            unclear. Granth has counselors who are well versed in guiding and
+            understanding the students’ personality.
+          </Typography>
+          <Typography style={{ marginBottom: 10 }}>
+            A famous German-born scientist Albert Einstein said that – Everybody
+            is a genius but if you judge a fish by its ability to climb a tree,
+            people will believe that the fish is incapable. The fish’s best
+            ability is to swim in the water. The value here is that each person
+            or a child possesses a unique character and to pull out that unique
+            character the concerned person needs to be mentored.
+          </Typography>
+        </div>
+        <div>
+          <img
+            src="https://edvi.app/static/media/blog.febe592a.svg"
+            height="400px"
+            width="100%"
+            alt=""
+          />
+        </div>
+      </div>
+      <div
+        style={{
+          backgroundColor: "#fef9f2",
+          display: "flex",
+          justifyContent: "space-evenly",
+          alignItems: "center",
+          marginTop: 30,
+          flexWrap: "wrap",
+          padding: 15,
+          // border: "2px solid red",
+        }}
+      >
+        <div>
+          <img
+            src="https://edvi.app/static/media/our-model.f0d36a90.webp"
+            height="400px"
+            width="100%"
+            alt=""
+          />
+        </div>
+        <div style={{ width: 600, marginTop: 20 }}>
+          {/* <Typography
+            variant="h4"
+            style={{ fontWeight: "bolder", marginBottom: 20 }}
+          >
+            Our model
+          </Typography> */}
+          <Typography style={{ marginBottom: 20 }}>
+            So, that’s where Granth comes into place.The guidance is based on 5
+            key dimensions which are:
+          </Typography>
+          <ol>
+            <li>
+              <Typography>Skills and Abilities</Typography>
+            </li>
+            <li>
+              <Typography>Career Interest</Typography>
+            </li>
+            <li>
+              <Typography>Learning Style</Typography>
+            </li>
+            <li>
+              <Typography>Career Motivator</Typography>
+            </li>
+            <li>
+              <Typography>Personality</Typography>
+            </li>
+          </ol>
+        </div>
+      </div>
       <ModalPage />
     </div>
   );

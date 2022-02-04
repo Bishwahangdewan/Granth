@@ -4,8 +4,9 @@ import { UserContext } from "./StateMan";
 import twelveimg from "../assests/Work_6.jpg";
 
 function TwelveSection(props) {
-  const { modalS } = useContext(UserContext);
+  const { modalS, screenSizeS } = useContext(UserContext);
   const [modal, setModal] = modalS;
+  const [screenSize] = screenSizeS;
   return (
     <div
       style={{
@@ -21,9 +22,11 @@ function TwelveSection(props) {
       }}
       id="twelveSection"
     >
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
-        <img src={twelveimg} height="500px" width="500px" alt="" />
-      </div>
+      {screenSize ? null : (
+        <div style={{ display: "flex", flexWrap: "wrap" }}>
+          <img src={twelveimg} height="500px" width="500px" alt="" />
+        </div>
+      )}
       <div
         style={{
           width: 500,
@@ -36,24 +39,28 @@ function TwelveSection(props) {
         <Typography variant="h4" style={{ fontWeight: "bold" }}>
           Class 11 - Class 12
         </Typography>
-        <div style={{ paddingBlock: 25 }}>
-          <Typography style={{ marginTop: 10, fontSize: 20 }}>
-            So Kids, are you set to take the correct group of subjects? How do
-            you plan to select your optional subjects? Do you need some extra
-            aid to pursue your passion/hobbies?
+        <div>
+          <Typography style={{ marginTop: 10 }}>
+            So Kids, are you set to take the correct group of subjects?
           </Typography>
-          <Typography style={{ fontSize: 20 }}>
+          <Typography style={{ marginTop: 3 }}>
+            How do you plan to select your optional subjects?
+          </Typography>
+          <Typography style={{ marginTop: 3 }}>
+            Do you need some extra aid to pursue your passion/hobbies?
+          </Typography>
+          <Typography style={{ marginTop: 3 }}>
             Let’s talk and hear you out....
           </Typography>
-          <Typography style={{ fontSize: 20 }}>
+          <Typography style={{ marginTop: 3 }}>
             What is it that you want to do?
           </Typography>
-          <Typography style={{ fontSize: 20 }}>
+          <Typography style={{ marginTop: 5, color: "#fccc14", fontSize: 19 }}>
             Get the right advice from the experts who can guide you make an
             informative decision
           </Typography>
         </div>
-        {/* <ul>
+        <ul>
           <li>
             <Typography>
               We’ll help you see through the choices that you make
@@ -77,7 +84,7 @@ function TwelveSection(props) {
               subjects
             </Typography>
           </li>
-        </ul> */}
+        </ul>
         <Button
           variant="contained"
           size="large"
@@ -94,6 +101,11 @@ function TwelveSection(props) {
           Book Now For 11th-12th
         </Button>
       </div>
+      {screenSize ? (
+        <div style={{ display: "flex", flexWrap: "wrap" }}>
+          <img src={twelveimg} height="500px" width="500px" alt="" />
+        </div>
+      ) : null}
       <div style={{ display: "none" }}>{modal}</div>
     </div>
   );
