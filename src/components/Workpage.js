@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Typography } from "@mui/material";
 import ModalPage from "./ModalPage";
+import { UserContext } from "./StateMan";
 import scene1 from "../assests/scene1.png";
 import scene2 from "../assests/scene2.png";
 import scene3 from "../assests/scene3.png";
 import scene4 from "../assests/scene4.png";
 
 function Workpage(props) {
+  const { screenSizeS } = useContext(UserContext);
+  const [screenSize] = screenSizeS;
   return (
     <div style={{ marginTop: 35 }}>
       <div
@@ -111,9 +114,11 @@ function Workpage(props) {
           // border: "2px solid red",
         }}
       >
-        <div>
-          <img src={scene2} height="400px" width="100%" alt="" />
-        </div>
+        {screenSize ? null : (
+          <div>
+            <img src={scene2} height="400px" width="100%" alt="" />
+          </div>
+        )}
         <div style={{ width: 600 }}>
           <Typography
             variant="h4"
@@ -166,6 +171,11 @@ function Workpage(props) {
             </li>
           </ol>
         </div>
+        {screenSize ? (
+          <div>
+            <img src={scene2} height="400px" width="100%" alt="" />
+          </div>
+        ) : null}
       </div>
       <div
         style={{
@@ -220,9 +230,11 @@ function Workpage(props) {
           // border: "2px solid red",
         }}
       >
-        <div>
-          <img src={scene4} height="400px" width="100%" alt="" />
-        </div>
+        {screenSize ? null : (
+          <div>
+            <img src={scene4} height="400px" width="100%" alt="" />
+          </div>
+        )}
         <div style={{ width: 600 }}>
           <Typography
             variant="h4"
@@ -238,6 +250,11 @@ function Workpage(props) {
             the career path to attain the ultimate career goal.
           </Typography>
         </div>
+        {screenSize ? (
+          <div>
+            <img src={scene4} height="400px" width="100%" alt="" />
+          </div>
+        ) : null}
       </div>
       <ModalPage />
     </div>

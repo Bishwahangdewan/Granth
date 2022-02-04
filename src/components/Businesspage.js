@@ -29,7 +29,7 @@ function Businesspage(props) {
         }}
       >
         <Typography variant="h4" style={{ fontWeight: "bold", color: "white" }}>
-          WELCOME
+          Welcome
         </Typography>
         {/* <Typography style={{ marginTop: 10 }}>
           We make teacher & student’s life simpler, more pleasant and more
@@ -46,7 +46,7 @@ function Businesspage(props) {
           marginTop: 100,
         }}
       >
-        <div style={{ width: "70%" }}>
+        <div style={{ width: screenSize ? "90%" : "70%" }}>
           <Typography
             variant="h5"
             style={{
@@ -64,10 +64,12 @@ function Businesspage(props) {
           </Typography>
           <ol>
             <li>
-              <Typography>Adolescents (Approximate age 13-20 years)</Typography>
+              <Typography style={{ marginTop: 5 }}>
+                Adolescents (Approximate age 13-20 years)
+              </Typography>
             </li>
             <li>
-              <Typography>
+              <Typography style={{ marginTop: 5 }}>
                 Young Adults (Approximate ages 21-39 years)
               </Typography>
             </li>
@@ -283,11 +285,11 @@ function Businesspage(props) {
             padding: 20,
           }}
         >
-          <Typography variant="h4">Join The #CareerReady Movement</Typography>
-          <Typography>
+          <Typography variant="h4">Let's Build Together</Typography>
+          {/* <Typography>
             Invite us over for a meeting and we’ll be happy to take you through
             the Mentoria Solution and how it will benefit your organisation.
-          </Typography>
+          </Typography> */}
         </div>
         <div
           style={{
@@ -295,25 +297,27 @@ function Businesspage(props) {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            flexWrap: "wrap",
           }}
         >
           <div
             style={{
               display: "flex",
               // border: "2px solid red",
-              width: "50%",
+              width: screenSize ? 400 : "50%",
               justifyContent: "space-between",
               marginTop: 10,
+              flexWrap: "wrap",
             }}
           >
-            <div style={{ width: "45%" }}>
+            <div style={{ width: screenSize ? 400 : "45%", marginTop: 5 }}>
               <InputLabel>Full Name</InputLabel>
               <TextField
                 placeholder="Full Name"
                 style={{ width: "100%", marginTop: 5 }}
               />
             </div>
-            <div style={{ width: "45%" }}>
+            <div style={{ width: screenSize ? 400 : "45%", marginTop: 5 }}>
               <InputLabel>City</InputLabel>
               <TextField
                 placeholder="City"
@@ -325,19 +329,20 @@ function Businesspage(props) {
             style={{
               display: "flex",
               // border: "2px solid red",
-              width: "50%",
+              width: screenSize ? 400 : "50%",
               justifyContent: "space-between",
               marginTop: 10,
+              flexWrap: "wrap",
             }}
           >
-            <div style={{ width: "45%" }}>
+            <div style={{ width: screenSize ? 400 : "45%", marginTop: 5 }}>
               <InputLabel>Email Id</InputLabel>
               <TextField
                 placeholder="Email Id"
                 style={{ width: "100%", marginTop: 5 }}
               />
             </div>
-            <div style={{ width: "45%" }}>
+            <div style={{ width: screenSize ? 400 : "45%", marginTop: 5 }}>
               <InputLabel>Phone Number</InputLabel>
               <TextField
                 placeholder="Phone Number"
@@ -348,7 +353,8 @@ function Businesspage(props) {
           <div
             style={{
               marginTop: 10,
-              width: "50%",
+              width: screenSize ? 400 : "50%",
+              // padding: 10,
             }}
           >
             <InputLabel>Purpose</InputLabel>
@@ -359,7 +365,7 @@ function Businesspage(props) {
               style={{ width: "100%", marginTop: 5 }}
             />
           </div>
-          <div style={{ width: "15%", marginTop: 40 }}>
+          <div style={{ width: screenSize ? "30%" : "15%", marginTop: 40 }}>
             <Button
               variant="contained"
               style={{

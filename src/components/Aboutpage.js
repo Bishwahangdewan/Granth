@@ -1,12 +1,15 @@
 import { Typography } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
 import ModalPage from "./ModalPage";
+import { UserContext } from "./StateMan";
 import about1 from "../assests/about1.png";
 import about2 from "../assests/about2.png";
 import about3 from "../assests/about3.png";
 import about4 from "../assests/about4.png";
 
 function Aboutpage(props) {
+  const { screenSizeS } = useContext(UserContext);
+  const [screenSize] = screenSizeS;
   return (
     <div>
       <div>
@@ -33,7 +36,7 @@ function Aboutpage(props) {
             variant="h4"
             style={{ fontWeight: "bold", color: "white" }}
           >
-            ABOUT GRANTH
+            About Granth
           </Typography>
           {/* <Typography style={{ marginTop: 10 }}>
             We make teacher & student’s life simpler, more pleasant and more
@@ -96,9 +99,11 @@ function Aboutpage(props) {
           // border: "2px solid red",
         }}
       >
-        <div>
-          <img src={about2} height="400px" width="100%" alt="" />
-        </div>
+        {screenSize ? null : (
+          <div>
+            <img src={about2} height="400px" width="100%" alt="" />
+          </div>
+        )}
         <div style={{ width: 600, marginTop: 20 }}>
           {/* <Typography
             variant="h4"
@@ -118,6 +123,11 @@ function Aboutpage(props) {
             going.
           </Typography>
         </div>
+        {screenSize ? (
+          <div>
+            <img src={about2} height="400px" width="100%" alt="" />
+          </div>
+        ) : null}
       </div>
       <div
         style={{
@@ -171,9 +181,11 @@ function Aboutpage(props) {
           // border: "2px solid red",
         }}
       >
-        <div>
-          <img src={about4} height="400px" width="100%" alt="" />
-        </div>
+        {screenSize ? null : (
+          <div>
+            <img src={about4} height="400px" width="100%" alt="" />
+          </div>
+        )}
         <div style={{ width: 600, marginTop: 20 }}>
           {/* <Typography
             variant="h4"
@@ -203,6 +215,11 @@ function Aboutpage(props) {
             </li>
           </ol>
         </div>
+        {screenSize ? (
+          <div>
+            <img src={about4} height="400px" width="100%" alt="" />
+          </div>
+        ) : null}
       </div>
       <ModalPage />
     </div>

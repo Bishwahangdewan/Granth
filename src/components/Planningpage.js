@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Typography } from "@mui/material";
 import ModalPage from "./ModalPage";
+import { UserContext } from "./StateMan";
+import plan1 from "../assests/plan1.png";
+import plan2 from "../assests/plan2.png";
+import plan3 from "../assests/plan3.png";
+import plan4 from "../assests/plan4.png";
 
 function Planningpage(props) {
+  const { screenSizeS } = useContext(UserContext);
+  const [screenSize] = screenSizeS;
   return (
     <div style={{ marginTop: 35 }}>
       <div
@@ -25,12 +32,12 @@ function Planningpage(props) {
         }}
       >
         <Typography variant="h4" style={{ fontWeight: "bold", color: "white" }}>
-          We are xyz
+          Carrer Planning
         </Typography>
-        <Typography style={{ marginTop: 10 }}>
+        {/* <Typography style={{ marginTop: 10 }}>
           We make teacher & student’s life simpler, more pleasant and more
           productive.
-        </Typography>
+        </Typography> */}
       </div>
       <div
         style={{
@@ -38,7 +45,7 @@ function Planningpage(props) {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          marginTop: 100,
+          marginTop: 70,
         }}
       >
         <div
@@ -47,23 +54,38 @@ function Planningpage(props) {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
+            padding: 10,
+            width: screenSize ? "90%" : "70%",
           }}
         >
-          <Typography variant="h4">
+          {/* <Typography variant="h4">
             India’s Most Reliable Career Assessment
+          </Typography> */}
+          <Typography variant="h6" style={{ color: "#5b5c5c", marginTop: 5 }}>
+            Whether your goal is to become a CEO or be an entrepreneur or you
+            just don’t know where you stand right now; It’s important to make an
+            aware choice.
           </Typography>
-          <Typography variant="h5">
-            Take the Mentoria assessment to get started.
+          <Typography variant="h6" style={{ color: "#5b5c5c", marginTop: 3 }}>
+            Granth offers you a platform to voice out your dreams and lay a plan
+            for yourself that you’ll be interested in working towards.
+          </Typography>
+          <Typography variant="h6" style={{ color: "#5b5c5c", marginTop: 3 }}>
+            Our foundation is based on 4 career planning tools, which are
+            considered to impact the activities of a candidate's life cycle. It
+            also helps gain insight into a person’s nature and the ability for
+            employment suitability. (A smart art type of diagram on right-hand
+            side)
           </Typography>
         </div>
-        <div style={{ marginTop: 30 }}>
+        {/* <div style={{ marginTop: 30 }}>
           <img
             src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
             height="500px"
             width="100%"
             alt=""
           />
-        </div>
+        </div> */}
       </div>
       <div
         style={{
@@ -118,12 +140,7 @@ function Planningpage(props) {
           </ul>
         </div>
         <div>
-          <img
-            src="https://edvi.app/static/media/blog.febe592a.svg"
-            height="400px"
-            width="100%"
-            alt=""
-          />
+          <img src={plan1} height="400px" width="100%" alt="" />
         </div>
       </div>
       <div
@@ -137,14 +154,11 @@ function Planningpage(props) {
           // border: "2px solid red",
         }}
       >
-        <div>
-          <img
-            src="https://edvi.app/static/media/blog.febe592a.svg"
-            height="400px"
-            width="100%"
-            alt=""
-          />
-        </div>
+        {screenSize ? null : (
+          <div>
+            <img src={plan2} height="400px" width="100%" alt="" />
+          </div>
+        )}
         <div style={{ width: 600 }}>
           <Typography
             variant="h4"
@@ -172,6 +186,11 @@ function Planningpage(props) {
             </li>
           </ul>
         </div>
+        {screenSize ? (
+          <div>
+            <img src={plan2} height="400px" width="100%" alt="" />
+          </div>
+        ) : null}
       </div>
       <div
         style={{
@@ -216,12 +235,7 @@ function Planningpage(props) {
           </ul>
         </div>
         <div>
-          <img
-            src="https://edvi.app/static/media/blog.febe592a.svg"
-            height="400px"
-            width="100%"
-            alt=""
-          />
+          <img src={plan3} height="400px" width="100%" alt="" />
         </div>
       </div>
       <div
@@ -235,14 +249,11 @@ function Planningpage(props) {
           // border: "2px solid red",
         }}
       >
-        <div>
-          <img
-            src="https://edvi.app/static/media/blog.febe592a.svg"
-            height="400px"
-            width="100%"
-            alt=""
-          />
-        </div>
+        {screenSize ? null : (
+          <div>
+            <img src={plan4} height="400px" width="100%" alt="" />
+          </div>
+        )}
         <div style={{ width: 600 }}>
           <Typography
             variant="h4"
@@ -266,6 +277,11 @@ function Planningpage(props) {
             </li>
           </ul>
         </div>
+        {screenSize ? (
+          <div>
+            <img src={plan4} height="400px" width="100%" alt="" />
+          </div>
+        ) : null}
       </div>
       <ModalPage />
     </div>
