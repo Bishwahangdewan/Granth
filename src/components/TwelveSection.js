@@ -29,7 +29,7 @@ function TwelveSection(props) {
       )}
       <div
         style={{
-          width: 500,
+          width: 560,
           margin: 25,
           display: "flex",
           flexDirection: "column",
@@ -41,33 +41,38 @@ function TwelveSection(props) {
         </Typography>
         <div>
           <Typography style={{ marginTop: 10 }}>
-            So Kids, are you set to take the correct group of subjects?
+            # So, have you decided upon your majors?
           </Typography>
           <Typography style={{ marginTop: 3 }}>
-            How do you plan to select your optional subjects?
+            # Do you know what competitive exams can you give?
           </Typography>
           <Typography style={{ marginTop: 3 }}>
-            Do you need some extra aid to pursue your passion/hobbies?
-          </Typography>
-          <Typography style={{ marginTop: 3 }}>
-            Let’s talk and hear you out....
-          </Typography>
-          <Typography style={{ marginTop: 3 }}>
-            What is it that you want to do?
+            # Are you skilled for the university’s admission process?
           </Typography>
           <Typography
             style={{
-              marginTop: 5,
+              marginTop: 10,
+              fontSize: 26.5,
+              fontFamily: ["Caveat", "cursive"],
+            }}
+          >
+            Let’s talk and hear you out…. What is it that you want to do?
+          </Typography>
+
+          <Typography
+            style={{
+              marginTop: 12,
               color: "#fccc14",
               fontSize: 19,
               fontWeight: "bolder",
+              marginBottom: 5,
             }}
           >
             Get the right advice from the experts who can guide you make an
             informative decision
           </Typography>
         </div>
-        <ul>
+        <ul style={{ textAlign: "justify" }}>
           <li>
             <Typography>
               We’ll help you see through the choices that you make
@@ -87,8 +92,7 @@ function TwelveSection(props) {
           </li>
           <li>
             <Typography>
-              You can consider other vocational courses along with regular
-              subjects
+              There are many parallel courses that can make you college ready
             </Typography>
           </li>
         </ul>

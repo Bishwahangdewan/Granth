@@ -34,7 +34,12 @@ function Aboutpage(props) {
         >
           <Typography
             variant="h4"
-            style={{ fontWeight: "bold", color: "white" }}
+            style={{
+              fontWeight: "bold",
+              color: "white",
+              fontFamily: "Playfair Display SC",
+              fontSize: 50,
+            }}
           >
             About Granth
           </Typography>

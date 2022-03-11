@@ -10,11 +10,14 @@ import {
 } from "@mui/material";
 import { UserContext } from "./StateMan";
 import firebase from "../Firebase";
+import Snackbar from "@mui/material/Snackbar";
+import IconButton from "@mui/material/IconButton";
 
 function ModalPage(props) {
   const { modalS, screenSizeS } = useContext(UserContext);
   const [modal, setModal] = modalS;
   const [screenSize] = screenSizeS;
+  const [openAlert, setopenAlert] = useState(false);
 
   const [name, setName] = useState("");
   const [Vname, setVName] = useState("");
@@ -28,9 +31,29 @@ function ModalPage(props) {
   const [Vclassx, setVClassx] = useState("none");
   const [cmnt, setCmnt] = useState("");
 
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setopenAlert(false);
+  };
+  const action = (
+    <React.Fragment>
+      <IconButton
+        size="small"
+        aria-label="close"
+        color="inherit"
+        onClick={handleClose}
+      >
+        <CloseIcon fontSize="small" />
+      </IconButton>
+    </React.Fragment>
+  );
+
   const db = firebase.firestore();
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (name === "") {
       setVName("Enter Full name");
     }
@@ -51,9 +74,11 @@ function ModalPage(props) {
       age !== "" &&
       email !== "" &&
       number !== "" &&
-      classx !== "none"
+      classx !== "none" &&
+      Vage === "" &&
+      Vnumber === ""
     ) {
-      db.collection("data").add({
+      await db.collection("data").add({
         name,
         age,
         email,
@@ -61,12 +86,16 @@ function ModalPage(props) {
         classx,
         cmnt,
       });
-      setModal(false);
+      await setModal(false);
+      setopenAlert(true);
       setName("");
       setAge("");
       setEmail("");
       setNumber("");
       setClassx("none");
+      setCmnt("");
+      setVAge("");
+      setVNumber("");
     }
   };
   return (
@@ -390,6 +419,13 @@ function ModalPage(props) {
           </div>
         </div>
       </Modal>
+      <Snackbar
+        open={openAlert}
+        autoHideDuration={5000}
+        onClose={handleClose}
+        message="Submitted Successfully"
+        action={action}
+      />
     </div>
   );
 }

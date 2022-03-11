@@ -7,7 +7,7 @@ import TwelveSection from "./TwelveSection";
 
 function Homepage(props) {
   return (
-    <div style={{ marginTop: 10 }}>
+    <div style={{ marginTop: 25 }}>
       <Section1 />
       {/* <ComicStripSection /> */}
       <TenthSection />

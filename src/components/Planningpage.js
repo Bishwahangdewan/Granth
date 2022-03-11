@@ -31,7 +31,15 @@ function Planningpage(props) {
           padding: 15,
         }}
       >
-        <Typography variant="h4" style={{ fontWeight: "bold", color: "white" }}>
+        <Typography
+          variant="h4"
+          style={{
+            fontWeight: "bold",
+            color: "white",
+            fontFamily: "Playfair Display SC",
+            fontSize: 50,
+          }}
+        >
           Carrer Planning
         </Typography>
         {/* <Typography style={{ marginTop: 10 }}>
@@ -53,7 +61,7 @@ function Planningpage(props) {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            alignItems: "center",
+            // alignItems: "center",
             padding: 10,
             width: screenSize ? "90%" : "70%",
           }}
@@ -61,21 +69,68 @@ function Planningpage(props) {
           {/* <Typography variant="h4">
             India’s Most Reliable Career Assessment
           </Typography> */}
-          <Typography variant="h6" style={{ color: "#5b5c5c", marginTop: 5 }}>
-            Whether your goal is to become a CEO or be an entrepreneur or you
-            just don’t know where you stand right now; It’s important to make an
-            aware choice.
+          <Typography
+            variant="h6"
+            style={{
+              color: "#5b5c5c",
+              marginTop: 5,
+              fontFamily: ["Caveat", "cursive"],
+              fontSize: 28,
+            }}
+          >
+            It will be about time when the infamous question starts popping in
+            front of you - “Beta, bade hoke kya banoge?”
           </Typography>
-          <Typography variant="h6" style={{ color: "#5b5c5c", marginTop: 3 }}>
-            Granth offers you a platform to voice out your dreams and lay a plan
-            for yourself that you’ll be interested in working towards.
+          <Typography
+            variant="h6"
+            style={{
+              color: "#5b5c5c",
+              marginTop: 3,
+              fontFamily: ["Caveat", "cursive"],
+              fontSize: 28,
+            }}
+          >
+            And the answers either baffle the others or come as a reality check
+            to oneself.
           </Typography>
-          <Typography variant="h6" style={{ color: "#5b5c5c", marginTop: 3 }}>
-            Our foundation is based on 4 career planning tools, which are
-            considered to impact the activities of a candidate's life cycle. It
-            also helps gain insight into a person’s nature and the ability for
-            employment suitability. (A smart art type of diagram on right-hand
-            side)
+          <Typography
+            variant="h6"
+            style={{
+              color: "#5b5c5c",
+              marginTop: 3,
+              fontFamily: ["Caveat", "cursive"],
+              fontSize: 28,
+            }}
+          >
+            It’s seen that less than 5% of children know exactly about their
+            career, their modus operandi, strategy, path, skills required and
+            all about it. They have it all figured out, while the others are
+            puzzled.
+          </Typography>
+          <Typography
+            variant="h6"
+            style={{
+              color: "#5b5c5c",
+              marginTop: 3,
+              fontFamily: ["Caveat", "cursive"],
+              fontSize: 28,
+            }}
+          >
+            Well it might sound like a tight ropewalk but it isn’t.
+          </Typography>
+          <Typography
+            variant="h6"
+            style={{
+              color: "#5b5c5c",
+              marginTop: 3,
+              fontFamily: ["Caveat", "cursive"],
+              fontSize: 28,
+            }}
+          >
+            Granth career counselling is a platform that will help you with your
+            quest and help you lay a plan for yourself that you’ll be interested
+            in working towards. Our foundation is based on 4 career planning
+            tools.
           </Typography>
         </div>
         {/* <div style={{ marginTop: 30 }}>
@@ -108,34 +163,21 @@ function Planningpage(props) {
           <ul>
             <li>
               <Typography>
-                It involves performing a self-evaluation to test the suitability
-                for the right career choice.
+                It’s important to know whether you’ll be able to dedicate for
+                longer duration of hours as required in Medicine, or do you set
+                your mind free to be as creative as possible or are you driven
+                by rules and regulation.
               </Typography>
             </li>
             <li>
+              <Typography>Hence, self-evaluation is the key.</Typography>
+            </li>
+            <li>
               <Typography>
-                It is done through certain career assessments. These assessments
-                are designed to understand their
+                We understand and garner your interest, passion, motivation,
+                values, personality, and ability through various psychometric
+                assessments.
               </Typography>
-              <ul>
-                <li>
-                  <Typography>Interest & Passion</Typography>
-                </li>
-                <li>
-                  <Typography>Motivation & Values</Typography>
-                </li>
-                <li>
-                  <Typography>Personality & Behaviour</Typography>
-                </li>
-                <li>
-                  <Typography>
-                    Learning Styles, Skills, Aptitude & Abilities
-                  </Typography>
-                </li>
-                <li>
-                  <Typography>Work Styles</Typography>
-                </li>
-              </ul>
             </li>
           </ul>
         </div>
@@ -169,20 +211,23 @@ function Planningpage(props) {
           <ul>
             <li>
               <Typography>
-                After you have figured your interests, aptitude and strengths
-                through career assessment tools; it’s time to find out about
+                After your interests, aptitude and strengths are analysed
+                through career assessment tools; it’s time to dig in for
                 different career options.
               </Typography>
             </li>
             <li>
               <Typography>
-                You can research each job separately and gather information
+                You can research for each job separately and gather information
                 about its educational qualifications, skills, training,
-                experience, salary levels and benefits for assuming that role
+                experience, salary levels and benefits on assuming that role.
               </Typography>
             </li>
             <li>
-              <Typography>Perform market research for the viability</Typography>
+              <Typography>
+                It’s also important to perform market research for the viability
+                of career option
+              </Typography>
             </li>
           </ul>
         </div>
@@ -213,23 +258,21 @@ function Planningpage(props) {
           <ul>
             <li>
               <Typography>
-                Once you have researched the jobs , trim down your list to most
+                Once you have discovered the jobs, trim down your list to most
                 suitable options.
               </Typography>
             </li>
             <li>
               <Typography>
-                Compile a list of educational qualifications, experience and
-                skills that are essential for that career
+                Prepare a roadmap for the same. Compile a list of educational
+                qualifications, experience and skills that are essential for
+                that career.
               </Typography>
             </li>
             <li>
-              <Typography>Develop the requisite training or skills.</Typography>
-            </li>
-            <li>
               <Typography>
-                Develop the requisite training or skills.Take continuous
-                education courses and learn new skills
+                Aid yourself with the requisite training/skills, education,
+                fellowship, internship and whatever required.
               </Typography>
             </li>
           </ul>
@@ -264,15 +307,22 @@ function Planningpage(props) {
           <ul>
             <li>
               <Typography>
-                Once you have decided upon the career option, it’s important to
-                connect with experienced professionals and get their first-hand
-                perspectives on what the work involves.
+                It’s always good to ask your near and dear ones who are already
+                pursuing the same career path.
               </Typography>
             </li>
             <li>
               <Typography>
-                You can connect with people and opportunities at conferences,
-                personal associations, and network sites.
+                But make sure that they are aware of your abilities, aptitude,
+                subject, and your sore point.
+              </Typography>
+            </li>
+            <li>
+              <Typography>
+                It’s relevant to connect with experienced professionals and get
+                their first-hand perspectives on what the work involves. This
+                will guide your way through the day of work that you are aiming
+                at.
               </Typography>
             </li>
           </ul>

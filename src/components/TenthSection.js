@@ -23,7 +23,7 @@ function TenthSection(props) {
     >
       <div
         style={{
-          width: 500,
+          width: 560,
           margin: 25,
           display: "flex",
           flexDirection: "column",
@@ -31,38 +31,45 @@ function TenthSection(props) {
         }}
       >
         <Typography variant="h4" style={{ fontWeight: "bold" }}>
-          Class 9 - Class 10
+          Class 8 - Class 10
         </Typography>
         <div>
           <Typography style={{ marginTop: 10 }}>
-            Are you geared up to choose the right subject?
+            # Are you geared up to choose the right subject?
           </Typography>
           <Typography style={{ marginTop: 3 }}>
-            Do you know the right skill set for you?
+            # Do you know the right skill set for you?
           </Typography>
           <Typography style={{ marginTop: 3 }}>
-            Can you create the right concoction of subjects?
+            # Can you create the right concoction of subjects?
           </Typography>
-          <Typography style={{ marginTop: 3 }}>
-            Don’t worry it’s not mind-boggling
-          </Typography>
-          <Typography style={{ marginTop: 3 }}>Leave it to us......</Typography>
           <Typography
             style={{
-              marginTop: 5,
+              marginTop: 10,
+              fontSize: 26.5,
+              fontFamily: ["Caveat", "cursive"],
+            }}
+          >
+            Don’t worry it’s not mind-boggling.... Leave it to us
+          </Typography>
+
+          <Typography
+            style={{
+              marginTop: 12,
               color: "#fccc14",
               fontSize: 19,
               fontWeight: "bolder",
+              marginBottom: 5,
             }}
           >
             Get the right advice from the experts who can guide you make an
             informative decision
           </Typography>
         </div>
-        <ul>
+        <ul style={{ textAlign: "justify" }}>
           <li>
             <Typography>
-              We’ll help you understand your area of interest
+              We’ll help you understand your interests, skills, abilities
             </Typography>
           </li>
           <li>

@@ -1,7 +1,7 @@
 import { Button, InputLabel, TextField, Typography } from "@mui/material";
 import React, { useContext } from "react";
 import ModalPage from "./ModalPage";
-import buisness1 from "../assests/buisness1.jpg";
+// import buisness1 from "../assests/buisness1.jpg";
 import { UserContext } from "./StateMan";
 
 function Businesspage(props) {
@@ -13,10 +13,12 @@ function Businesspage(props) {
         style={{
           width: "100%",
           // height: "400px",
-          backgroundImage: `url(${buisness1})`,
+          backgroundImage: `url(
+            "https://d33wubrfki0l68.cloudfront.net/static/media/18ffdfbe225ba547a6fcd93cba102639a48ccbe4/dots.68433c53.png"
+          )`,
           backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          // backgroundPosition: "center",
+          backgroundSize: "contain",
+          backgroundColor: "#fccc14",
           marginTop: 20,
           height: 250,
           display: "flex",
@@ -28,7 +30,15 @@ function Businesspage(props) {
           padding: 15,
         }}
       >
-        <Typography variant="h4" style={{ fontWeight: "bold", color: "white" }}>
+        <Typography
+          variant="h4"
+          style={{
+            fontWeight: "bold",
+            color: "white",
+            fontFamily: "Playfair Display SC",
+            fontSize: 50,
+          }}
+        >
           Welcome
         </Typography>
         {/* <Typography style={{ marginTop: 10 }}>

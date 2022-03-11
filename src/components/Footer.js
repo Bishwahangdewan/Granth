@@ -7,11 +7,55 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { UserContext } from "./StateMan";
+import firebase from "../Firebase";
+import Snackbar from "@mui/material/Snackbar";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
 
 function Footer(props) {
-  const [Interest, setInterest] = useState("none");
   const { screenSizeS } = useContext(UserContext);
   const [screenSize] = screenSizeS;
+
+  const [email, setEmail] = useState("");
+  const [number, setNumber] = useState("");
+  const [Interest, setInterest] = useState("none");
+
+  const [openAlert, setopenAlert] = useState(false);
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setopenAlert(false);
+  };
+  const action = (
+    <React.Fragment>
+      <IconButton
+        size="small"
+        aria-label="close"
+        color="inherit"
+        onClick={handleClose}
+      >
+        <CloseIcon fontSize="small" />
+      </IconButton>
+    </React.Fragment>
+  );
+
+  const db = firebase.firestore();
+
+  const handleSubmit = async () => {
+    await db.collection("contact").add({
+      email,
+      number,
+      Interest,
+    });
+    setopenAlert(true);
+    setEmail("");
+    setNumber("");
+    setInterest("none");
+  };
+
   return (
     <div style={{ backgroundColor: "#ffde5e", marginTop: 60 }}>
       <div
@@ -24,21 +68,22 @@ function Footer(props) {
       >
         <div
           style={{
-            width: 400,
-            // , border: "2px solid red"
+            width: 420,
+            // border: "2px solid red",
+            // padding: 10,
+            textAlign: "justify",
           }}
         >
           <Typography variant="h6" style={{ textAlign: "center" }}>
             About Us
           </Typography>
           <Typography>
-            It is an education platform that offers career counselling and
-            guidance. It consists of all the curated options for careers that
-            can be explored by any individual. These options are elucidated to
-            personnel seeking career advice based on their interests or merits
-            or even when they feel they are unclear. Granth has counselors who
-            are well versed in guiding and understanding the students’
-            personality.
+            Granth is a career counselling and guidance platform that helps you
+            reflect on your abilities before making a career choice. With all
+            the career options available it becomes overwhelming to choose the
+            right career path without getting pressurised or anxious. These
+            options are elucidated to personnel seeking career advice based on
+            their interests or merits
           </Typography>
         </div>
         {screenSize ? (
@@ -84,10 +129,18 @@ function Footer(props) {
                 <TextField
                   placeholder="Email"
                   style={{ width: "100%", marginTop: 5, color: "red" }}
+                  value={email}
+                  onChange={(t) => {
+                    setEmail(t.target.value);
+                  }}
                 />
                 <TextField
                   placeholder="Phone number"
                   style={{ width: "100%", marginTop: 5 }}
+                  value={number}
+                  onChange={(t) => {
+                    setNumber(t.target.value);
+                  }}
                 />
                 <TextField
                   select
@@ -105,10 +158,13 @@ function Footer(props) {
                     Interested in
                   </MenuItem>
                   <MenuItem value="Career Counselling">
-                    Career Counselling
+                    Career Assessment
                   </MenuItem>
                   <MenuItem value="Career Planning">Career Planning</MenuItem>
                   <MenuItem value="Study Abroad">Study Abroad</MenuItem>
+                  <MenuItem value="Business Collaboration">
+                    Business Collaboration
+                  </MenuItem>
                 </TextField>
                 <Button
                   variant="contained"
@@ -119,6 +175,9 @@ function Footer(props) {
                     padding: 10,
                     marginTop: 5,
                     marginLeft: "35%",
+                  }}
+                  onClick={() => {
+                    handleSubmit();
                   }}
                 >
                   Send
@@ -175,10 +234,18 @@ function Footer(props) {
                 <TextField
                   placeholder="Email"
                   style={{ width: "100%", marginTop: 5, color: "red" }}
+                  value={email}
+                  onChange={(t) => {
+                    setEmail(t.target.value);
+                  }}
                 />
                 <TextField
                   placeholder="Phone number"
                   style={{ width: "100%", marginTop: 5 }}
+                  value={number}
+                  onChange={(t) => {
+                    setNumber(t.target.value);
+                  }}
                 />
                 <TextField
                   select
@@ -196,10 +263,13 @@ function Footer(props) {
                     Interested in
                   </MenuItem>
                   <MenuItem value="Career Counselling">
-                    Career Counselling
+                    Career Assessment
                   </MenuItem>
                   <MenuItem value="Career Planning">Career Planning</MenuItem>
                   <MenuItem value="Study Abroad">Study Abroad</MenuItem>
+                  <MenuItem value="Business Collaboration">
+                    Business Collaboration
+                  </MenuItem>
                 </TextField>
                 <Button
                   variant="contained"
@@ -210,6 +280,9 @@ function Footer(props) {
                     padding: 10,
                     marginTop: 5,
                     marginLeft: "30%",
+                  }}
+                  onClick={() => {
+                    handleSubmit();
                   }}
                 >
                   Send
@@ -237,6 +310,13 @@ function Footer(props) {
           </div>
         </div>
       </div>
+      <Snackbar
+        open={openAlert}
+        autoHideDuration={5000}
+        onClose={handleClose}
+        message="Submitted Successfully"
+        action={action}
+      />
     </div>
   );
 }

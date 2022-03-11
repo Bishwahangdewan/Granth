@@ -32,7 +32,15 @@ function Counsellingpage(props) {
           padding: 15,
         }}
       >
-        <Typography variant="h4" style={{ fontWeight: "bold", color: "white" }}>
+        <Typography
+          variant="h4"
+          style={{
+            fontWeight: "bold",
+            color: "white",
+            fontFamily: "Playfair Display SC",
+            fontSize: 50,
+          }}
+        >
           What are Career Assessments?
         </Typography>
         {/* <Typography style={{ marginTop: 10 }}>

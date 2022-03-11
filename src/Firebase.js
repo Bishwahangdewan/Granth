@@ -1,13 +1,13 @@
 import firebase from "firebase";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAbloBpTO5EfdgCj1Wd_jJE9INwqxfhW5Y",
-  authDomain: "atoz-b8611.firebaseapp.com",
-  projectId: "atoz-b8611",
-  storageBucket: "atoz-b8611.appspot.com",
-  messagingSenderId: "291497008612",
-  appId: "1:291497008612:web:c9bdca81d7763781ddfbf1",
-  measurementId: "G-06MTQK5C2K",
+  apiKey: "AIzaSyCM203lH9Yy_3Jp4xjp_SlJMPZLw2nTy1c",
+  authDomain: "granth-24abd.firebaseapp.com",
+  projectId: "granth-24abd",
+  storageBucket: "granth-24abd.appspot.com",
+  messagingSenderId: "188680485007",
+  appId: "1:188680485007:web:049cde9017daaa1bb918fa",
+  measurementId: "G-D2K1QPZQGX",
 };
 firebase.initializeApp(firebaseConfig);
 export default firebase;

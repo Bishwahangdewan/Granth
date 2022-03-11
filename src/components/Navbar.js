@@ -80,12 +80,13 @@ function Navbar(props) {
           <div
             className="h1"
             onClick={() => {
-              setBusiness(false);
-              setHome(false);
-              setAbout(false);
-              setPlanning(false);
-              setCounselling(true);
-              setHwork(false);
+              // setBusiness(false);
+              // setHome(false);
+              // setAbout(false);
+              // setPlanning(false);
+              // setCounselling(true);
+              // setHwork(false);
+              window.open("http://career.visitgranth.com/app/login");
             }}
           >
             <Typography
