@@ -40,15 +40,51 @@ function TwelveSection(props) {
           Class 11 - Class 12
         </Typography>
         <div>
-          <Typography style={{ marginTop: 10 }}>
-            # So, have you decided upon your majors?
-          </Typography>
-          <Typography style={{ marginTop: 3 }}>
-            # Do you know what competitive exams can you give?
-          </Typography>
-          <Typography style={{ marginTop: 3 }}>
-            # Are you skilled for the university’s admission process?
-          </Typography>
+          <div style={{ display: "flex" }}>
+            <Typography
+              style={{
+                marginTop: 10,
+                marginLeft: 15,
+                color: "black",
+                fontWeight: "bolder",
+              }}
+            >
+              #
+            </Typography>
+            <Typography style={{ marginTop: 10, marginLeft: 6 }}>
+              So, have you decided upon your majors?
+            </Typography>
+          </div>
+          <div style={{ display: "flex" }}>
+            <Typography
+              style={{
+                marginTop: 3,
+                marginLeft: 15,
+                color: "black",
+                fontWeight: "bolder",
+              }}
+            >
+              #
+            </Typography>
+            <Typography style={{ marginTop: 3, marginLeft: 6 }}>
+              Do you know what competitive exams can you give?
+            </Typography>
+          </div>
+          <div style={{ display: "flex" }}>
+            <Typography
+              style={{
+                marginTop: 3,
+                marginLeft: 15,
+                color: "black",
+                fontWeight: "bolder",
+              }}
+            >
+              #
+            </Typography>
+            <Typography style={{ marginTop: 3, marginLeft: 6 }}>
+              Are you skilled for the university’s admission process?
+            </Typography>
+          </div>
           <Typography
             style={{
               marginTop: 10,
@@ -72,30 +108,70 @@ function TwelveSection(props) {
             informative decision
           </Typography>
         </div>
-        <ul style={{ textAlign: "justify" }}>
-          <li>
-            <Typography>
+        <div>
+          <div style={{ display: "flex" }}>
+            <Typography
+              style={{
+                marginTop: 10,
+                marginLeft: 15,
+                color: "black",
+                fontWeight: "bolder",
+              }}
+            >
+              #
+            </Typography>
+            <Typography style={{ marginTop: 10, marginLeft: 6 }}>
               We’ll help you see through the choices that you make
             </Typography>
-          </li>
-          <li>
-            <Typography>
+          </div>
+          <div style={{ display: "flex" }}>
+            <Typography
+              style={{
+                marginTop: 3,
+                marginLeft: 15,
+                color: "black",
+                fontWeight: "bolder",
+              }}
+            >
+              #
+            </Typography>
+            <Typography style={{ marginTop: 3, marginLeft: 6 }}>
               Know the personality group you fall into in terms of skill sets,
               ambitions and aspirations
             </Typography>
-          </li>
-          <li>
-            <Typography>
+          </div>
+          <div style={{ display: "flex" }}>
+            <Typography
+              style={{
+                marginTop: 3,
+                marginLeft: 15,
+                color: "black",
+                fontWeight: "bolder",
+              }}
+            >
+              #
+            </Typography>
+            <Typography style={{ marginTop: 3, marginLeft: 6 }}>
               You can consider other vocational courses along with regular
               subjects
             </Typography>
-          </li>
-          <li>
-            <Typography>
+          </div>
+          <div style={{ display: "flex" }}>
+            <Typography
+              style={{
+                marginTop: 3,
+                marginLeft: 15,
+                color: "black",
+                fontWeight: "bolder",
+              }}
+            >
+              #
+            </Typography>
+            <Typography style={{ marginTop: 3, marginLeft: 6 }}>
               There are many parallel courses that can make you college ready
             </Typography>
-          </li>
-        </ul>
+          </div>
+        </div>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <Button
             variant="contained"

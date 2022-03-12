@@ -4,6 +4,7 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import DensityMediumIcon from "@mui/icons-material/DensityMedium";
 import { UserContext } from "./StateMan";
 import TsptPNG from "../assests/TsptPNG.png";
+import { Link } from "react-router-dom";
 
 function Navbar(props) {
   const [click, setClick] = useState(false);
@@ -70,12 +71,14 @@ function Navbar(props) {
               setHwork(false);
             }}
           >
-            <Typography
-              className="h2"
-              style={{ color: Home ? "#fccc14" : "#5b5c5c" }}
-            >
-              Home
-            </Typography>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <Typography
+                className="h2"
+                style={{ color: Home ? "#fccc14" : "#5b5c5c" }}
+              >
+                Home
+              </Typography>
+            </Link>
           </div>
           <div
             className="h1"
@@ -107,12 +110,14 @@ function Navbar(props) {
               setHwork(false);
             }}
           >
-            <Typography
-              className="h2"
-              style={{ color: Planning ? "#fccc14" : "#5b5c5c" }}
-            >
-              Career Planning
-            </Typography>
+            <Link to="/CareerPlanning" style={{ textDecoration: "none" }}>
+              <Typography
+                className="h2"
+                style={{ color: Planning ? "#fccc14" : "#5b5c5c" }}
+              >
+                Career Planning
+              </Typography>
+            </Link>
           </div>
           <div
             className="h1"
@@ -125,12 +130,14 @@ function Navbar(props) {
               setHwork(true);
             }}
           >
-            <Typography
-              className="h2"
-              style={{ color: Hwork ? "#fccc14" : "#5b5c5c" }}
-            >
-              How It Works
-            </Typography>
+            <Link to="/HowItWorks" style={{ textDecoration: "none" }}>
+              <Typography
+                className="h2"
+                style={{ color: Hwork ? "#fccc14" : "#5b5c5c" }}
+              >
+                How It Works
+              </Typography>
+            </Link>
           </div>
           <div
             className="h1"
@@ -143,12 +150,14 @@ function Navbar(props) {
               setHwork(false);
             }}
           >
-            <Typography
-              className="h2"
-              style={{ color: Business ? "#fccc14" : "#5b5c5c" }}
-            >
-              Business
-            </Typography>
+            <Link to="/Buisness" style={{ textDecoration: "none" }}>
+              <Typography
+                className="h2"
+                style={{ color: Business ? "#fccc14" : "#5b5c5c" }}
+              >
+                Business
+              </Typography>
+            </Link>
           </div>
           <div
             className="h1"
@@ -161,14 +170,16 @@ function Navbar(props) {
               setHwork(false);
             }}
           >
-            <Typography
-              className="h2"
-              style={{
-                color: About ? "#fccc14" : "#5b5c5c",
-              }}
-            >
-              About
-            </Typography>
+            <Link to="/About" style={{ textDecoration: "none" }}>
+              <Typography
+                className="h2"
+                style={{
+                  color: About ? "#fccc14" : "#5b5c5c",
+                }}
+              >
+                About
+              </Typography>
+            </Link>
           </div>
           <div className="h1">
             <PhoneIcon />
@@ -204,23 +215,26 @@ function Navbar(props) {
             setHwork(false);
           }}
         >
-          <Typography
-            className="h2"
-            style={{ color: Home ? "#fccc14" : "#5b5c5c" }}
-          >
-            Home
-          </Typography>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <Typography
+              className="h2"
+              style={{ color: Home ? "#fccc14" : "#5b5c5c" }}
+            >
+              Home
+            </Typography>
+          </Link>
         </div>
         <div
           className="h1"
           onClick={() => {
-            setBusiness(false);
-            setHome(false);
-            setAbout(false);
-            setPlanning(false);
-            setCounselling(true);
+            // setBusiness(false);
+            // setHome(false);
+            // setAbout(false);
+            // setPlanning(false);
+            // setCounselling(true);
             setClick(false);
-            setHwork(false);
+            // setHwork(false);
+            window.open("http://career.visitgranth.com/app/login");
           }}
         >
           <Typography
@@ -242,12 +256,14 @@ function Navbar(props) {
             setHwork(false);
           }}
         >
-          <Typography
-            className="h2"
-            style={{ color: Planning ? "#fccc14" : "#5b5c5c" }}
-          >
-            Career Planning
-          </Typography>
+          <Link to="/CareerPlanning" style={{ textDecoration: "none" }}>
+            <Typography
+              className="h2"
+              style={{ color: Planning ? "#fccc14" : "#5b5c5c" }}
+            >
+              Career Planning
+            </Typography>
+          </Link>
         </div>
         <div
           className="h1"
@@ -261,12 +277,14 @@ function Navbar(props) {
             setHwork(true);
           }}
         >
-          <Typography
-            className="h2"
-            style={{ color: Hwork ? "#fccc14" : "#5b5c5c" }}
-          >
-            How It Works
-          </Typography>
+          <Link to="/HowItWorks" style={{ textDecoration: "none" }}>
+            <Typography
+              className="h2"
+              style={{ color: Hwork ? "#fccc14" : "#5b5c5c" }}
+            >
+              How It Works
+            </Typography>
+          </Link>
         </div>
         <div
           className="h1"
@@ -280,12 +298,14 @@ function Navbar(props) {
             setHwork(false);
           }}
         >
-          <Typography
-            className="h2"
-            style={{ color: Business ? "#fccc14" : "#5b5c5c" }}
-          >
-            Business
-          </Typography>
+          <Link to="/Buisness" style={{ textDecoration: "none" }}>
+            <Typography
+              className="h2"
+              style={{ color: Business ? "#fccc14" : "#5b5c5c" }}
+            >
+              Business
+            </Typography>
+          </Link>
         </div>
         <div
           className="h1"
@@ -299,12 +319,16 @@ function Navbar(props) {
             setHwork(false);
           }}
         >
-          <Typography
-            className="h2"
-            style={{ color: About ? "#fccc14" : "#5b5c5c" }}
-          >
-            About
-          </Typography>
+          <Link to="/About" style={{ textDecoration: "none" }}>
+            <Typography
+              className="h2"
+              style={{
+                color: About ? "#fccc14" : "#5b5c5c",
+              }}
+            >
+              About
+            </Typography>
+          </Link>
         </div>
         <div style={{ margin: 15 }}>
           <Button

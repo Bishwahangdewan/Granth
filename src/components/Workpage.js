@@ -16,6 +16,8 @@ import {
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import firebase from "../Firebase";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 function Workpage(props) {
   const { screenSizeS } = useContext(UserContext);
@@ -115,7 +117,8 @@ function Workpage(props) {
   };
 
   return (
-    <div style={{ marginTop: 35 }}>
+    <div>
+      <Navbar />
       <div
         style={{
           backgroundImage: `url(
@@ -166,11 +169,9 @@ function Workpage(props) {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            width: "100%",
-            padding: 10,
+            paddingInline: 15,
           }}
         >
-          {/* <Typography variant="h4">How Does Granth Work?</Typography> */}
           <Typography
             variant="h6"
             style={{
@@ -649,6 +650,7 @@ function Workpage(props) {
         action={action}
       />
       <ModalPage />
+      <Footer />
     </div>
   );
 }

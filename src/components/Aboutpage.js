@@ -6,12 +6,15 @@ import about1 from "../assests/about1.png";
 import about2 from "../assests/about2.png";
 import about3 from "../assests/about3.png";
 import about4 from "../assests/about4.png";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 function Aboutpage(props) {
   const { screenSizeS } = useContext(UserContext);
   const [screenSize] = screenSizeS;
   return (
     <div>
+      <Navbar />
       <div>
         <div
           style={{
@@ -227,6 +230,7 @@ function Aboutpage(props) {
         ) : null}
       </div>
       <ModalPage />
+      <Footer />
     </div>
   );
 }

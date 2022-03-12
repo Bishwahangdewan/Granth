@@ -1,6 +1,8 @@
 import { Button, InputLabel, TextField, Typography } from "@mui/material";
 import React, { useContext } from "react";
+import Footer from "./Footer";
 import ModalPage from "./ModalPage";
+import Navbar from "./Navbar";
 // import buisness1 from "../assests/buisness1.jpg";
 import { UserContext } from "./StateMan";
 
@@ -8,7 +10,8 @@ function Businesspage(props) {
   const { screenSizeS } = useContext(UserContext);
   const [screenSize] = screenSizeS;
   return (
-    <div style={{ marginTop: 35 }}>
+    <div>
+      <Navbar />
       <div
         style={{
           width: "100%",
@@ -391,6 +394,7 @@ function Businesspage(props) {
         </div>
       </div>
       <ModalPage />
+      <Footer />
     </div>
   );
 }

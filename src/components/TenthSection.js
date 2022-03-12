@@ -23,7 +23,7 @@ function TenthSection(props) {
     >
       <div
         style={{
-          width: 560,
+          width: 550,
           margin: 25,
           display: "flex",
           flexDirection: "column",
@@ -34,15 +34,51 @@ function TenthSection(props) {
           Class 8 - Class 10
         </Typography>
         <div>
-          <Typography style={{ marginTop: 10 }}>
-            # Are you geared up to choose the right subject?
-          </Typography>
-          <Typography style={{ marginTop: 3 }}>
-            # Do you know the right skill set for you?
-          </Typography>
-          <Typography style={{ marginTop: 3 }}>
-            # Can you create the right concoction of subjects?
-          </Typography>
+          <div style={{ display: "flex" }}>
+            <Typography
+              style={{
+                marginTop: 10,
+                marginLeft: 15,
+                color: "black",
+                fontWeight: "bolder",
+              }}
+            >
+              #
+            </Typography>
+            <Typography style={{ marginTop: 10, marginLeft: 6 }}>
+              Are you geared up to choose the right subject?
+            </Typography>
+          </div>
+          <div style={{ display: "flex" }}>
+            <Typography
+              style={{
+                marginTop: 3,
+                marginLeft: 15,
+                color: "black",
+                fontWeight: "bolder",
+              }}
+            >
+              #
+            </Typography>
+            <Typography style={{ marginTop: 3, marginLeft: 6 }}>
+              Do you know the right skill set for you?
+            </Typography>
+          </div>
+          <div style={{ display: "flex" }}>
+            <Typography
+              style={{
+                marginTop: 3,
+                marginLeft: 15,
+                color: "black",
+                fontWeight: "bolder",
+              }}
+            >
+              #
+            </Typography>
+            <Typography style={{ marginTop: 3, marginLeft: 6 }}>
+              Can you create the right concoction of subjects?
+            </Typography>
+          </div>
           <Typography
             style={{
               marginTop: 10,
@@ -66,27 +102,69 @@ function TenthSection(props) {
             informative decision
           </Typography>
         </div>
-        <ul style={{ textAlign: "justify" }}>
-          <li>
-            <Typography>
+        <div>
+          <div style={{ display: "flex" }}>
+            <Typography
+              style={{
+                marginTop: 10,
+                marginLeft: 15,
+                color: "black",
+                fontWeight: "bolder",
+              }}
+            >
+              #
+            </Typography>
+            <Typography style={{ marginTop: 10, marginLeft: 6 }}>
               We’ll help you understand your interests, skills, abilities
             </Typography>
-          </li>
-          <li>
-            <Typography>
+          </div>
+          <div style={{ display: "flex" }}>
+            <Typography
+              style={{
+                marginTop: 3,
+                marginLeft: 15,
+                color: "black",
+                fontWeight: "bolder",
+              }}
+            >
+              #
+            </Typography>
+            <Typography style={{ marginTop: 3, marginLeft: 6 }}>
               Guide you through various career opportunities that can be pursued
             </Typography>
-          </li>
-          <li>
-            <Typography>
+          </div>
+          <div style={{ display: "flex" }}>
+            <Typography
+              style={{
+                marginTop: 3,
+                marginLeft: 15,
+                color: "black",
+                fontWeight: "bolder",
+              }}
+            >
+              #
+            </Typography>
+            <Typography style={{ marginTop: 3, marginLeft: 6 }}>
               Lay the foundation of picking up the right goals according to your
               personality
             </Typography>
-          </li>
-          <li>
-            <Typography>Answer all your inquisitiveness</Typography>
-          </li>
-        </ul>
+          </div>
+          <div style={{ display: "flex" }}>
+            <Typography
+              style={{
+                marginTop: 3,
+                marginLeft: 15,
+                color: "black",
+                fontWeight: "bolder",
+              }}
+            >
+              #
+            </Typography>
+            <Typography style={{ marginTop: 3, marginLeft: 6 }}>
+              Answer all your inquisitiveness
+            </Typography>
+          </div>
+        </div>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <Button
             variant="contained"
@@ -101,7 +179,7 @@ function TenthSection(props) {
             }}
             onClick={() => setModal(true)}
           >
-            Book Now For 9th-10th
+            Book Now For 8th-10th
           </Button>
         </div>
       </div>
