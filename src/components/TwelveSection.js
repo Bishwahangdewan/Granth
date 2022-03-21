@@ -4,9 +4,10 @@ import { UserContext } from "./StateMan";
 import twelveimg from "../assests/img11-12.png";
 
 function TwelveSection(props) {
-  const { modalS, screenSizeS } = useContext(UserContext);
+  const { modalS, screenSizeS, eleventwelveS } = useContext(UserContext);
   const [modal, setModal] = modalS;
   const [screenSize] = screenSizeS;
+  const [eleventwelve, setEleventwelve] = eleventwelveS;
   return (
     <div
       style={{
@@ -184,7 +185,10 @@ function TwelveSection(props) {
               color: "#5b5c5c",
               marginLeft: 0,
             }}
-            onClick={() => setModal(true)}
+            onClick={() => {
+              setEleventwelve(true);
+              setModal(true);
+            }}
           >
             Book Now For 11th-12th
           </Button>
@@ -195,7 +199,7 @@ function TwelveSection(props) {
           <img src={twelveimg} height="500px" width="500px" alt="" />
         </div>
       ) : null}
-      <div style={{ display: "none" }}>{modal}</div>
+      <div style={{ display: "none" }}>{(modal, eleventwelve)}</div>
     </div>
   );
 }

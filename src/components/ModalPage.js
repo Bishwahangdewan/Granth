@@ -14,11 +14,13 @@ import Snackbar from "@mui/material/Snackbar";
 import IconButton from "@mui/material/IconButton";
 
 function ModalPage(props) {
-  const { modalS, screenSizeS } = useContext(UserContext);
+  const { modalS, screenSizeS, eighttenS, eleventwelveS } =
+    useContext(UserContext);
   const [modal, setModal] = modalS;
   const [screenSize] = screenSizeS;
   const [openAlert, setopenAlert] = useState(false);
-
+  const [eightten, setEightten] = eighttenS;
+  const [eleventwelve, setEleventwelve] = eleventwelveS;
   const [name, setName] = useState("");
   const [Vname, setVName] = useState("");
   const [age, setAge] = useState("");
@@ -102,7 +104,19 @@ function ModalPage(props) {
     <div>
       <Modal
         open={modal}
-        onClose={() => setModal(false)}
+        onClose={() => {
+          setModal(false);
+          setName("");
+          setEightten(false);
+          setEleventwelve(false);
+          setAge("");
+          setEmail("");
+          setNumber("");
+          setClassx("none");
+          setCmnt("");
+          setVAge("");
+          setVNumber("");
+        }}
         style={{
           display: "flex",
           alignItems: "center",
@@ -143,10 +157,22 @@ function ModalPage(props) {
                 color: "#5b5c5c",
               }}
             >
-              Book a Pre Counselling Session for Free
+              Book a Pre Counselling Session
             </Typography>
             <Button
-              onClick={() => setModal(false)}
+              onClick={() => {
+                setModal(false);
+                setName("");
+                setEightten(false);
+                setEleventwelve(false);
+                setAge("");
+                setEmail("");
+                setNumber("");
+                setClassx("none");
+                setCmnt("");
+                setVAge("");
+                setVNumber("");
+              }}
               style={{
                 color: "black",
                 position: "absolute",
@@ -335,40 +361,107 @@ function ModalPage(props) {
                   Class
                 </InputLabel>
               </div>
-              <TextField
-                select
-                error={Vclassx === "none" ? "" : Vclassx}
-                helperText={Vclassx === "none" ? "" : Vclassx}
-                value={classx}
-                onChange={(v) => {
-                  if (v.target.value === "none") {
-                    setVClassx("Enter your class");
-                  } else {
-                    setVClassx("none");
-                  }
-                  setClassx(v.target.value);
-                }}
-                InputProps={{
-                  style: {
-                    color: classx === "none" ? "#aaaaaa" : "black",
-                  },
-                }}
-                style={{
-                  margin: 10,
-                  width: screenSize ? "90%" : "95%",
-                }}
-              >
-                <MenuItem value="none" disabled style={{ color: "red" }}>
-                  Enter your class
-                </MenuItem>
-                <MenuItem value={6}>6th</MenuItem>
-                <MenuItem value={7}>7th</MenuItem>
-                <MenuItem value={8}>8th</MenuItem>
-                <MenuItem value={9}>9th</MenuItem>
-                <MenuItem value={10}>10th</MenuItem>
-                <MenuItem value={11}>11th</MenuItem>
-                <MenuItem value={12}>12th</MenuItem>
-              </TextField>
+              {eightten ? (
+                <TextField
+                  select
+                  error={Vclassx === "none" ? "" : Vclassx}
+                  helperText={Vclassx === "none" ? "" : Vclassx}
+                  value={classx}
+                  onChange={(v) => {
+                    if (v.target.value === "none") {
+                      setVClassx("Enter your class");
+                    } else {
+                      setVClassx("none");
+                    }
+                    setClassx(v.target.value);
+                  }}
+                  InputProps={{
+                    style: {
+                      color: classx === "none" ? "#aaaaaa" : "black",
+                    },
+                  }}
+                  style={{
+                    margin: 10,
+                    width: screenSize ? "90%" : "95%",
+                  }}
+                >
+                  <MenuItem value="none" disabled style={{ color: "red" }}>
+                    Enter your class
+                  </MenuItem>
+
+                  <MenuItem value={8}>8th</MenuItem>
+                  <MenuItem value={9}>9th</MenuItem>
+                  <MenuItem value={10}>10th</MenuItem>
+                </TextField>
+              ) : null}
+              {eleventwelve ? (
+                <TextField
+                  select
+                  error={Vclassx === "none" ? "" : Vclassx}
+                  helperText={Vclassx === "none" ? "" : Vclassx}
+                  value={classx}
+                  onChange={(v) => {
+                    if (v.target.value === "none") {
+                      setVClassx("Enter your class");
+                    } else {
+                      setVClassx("none");
+                    }
+                    setClassx(v.target.value);
+                  }}
+                  InputProps={{
+                    style: {
+                      color: classx === "none" ? "#aaaaaa" : "black",
+                    },
+                  }}
+                  style={{
+                    margin: 10,
+                    width: screenSize ? "90%" : "95%",
+                  }}
+                >
+                  <MenuItem value="none" disabled style={{ color: "red" }}>
+                    Enter your class
+                  </MenuItem>
+
+                  <MenuItem value={11}>11th</MenuItem>
+                  <MenuItem value={12}>12th</MenuItem>
+                </TextField>
+              ) : null}
+              {eightten == false && eleventwelve == false ? (
+                <TextField
+                  select
+                  error={Vclassx === "none" ? "" : Vclassx}
+                  helperText={Vclassx === "none" ? "" : Vclassx}
+                  value={classx}
+                  onChange={(v) => {
+                    if (v.target.value === "none") {
+                      setVClassx("Enter your class");
+                    } else {
+                      setVClassx("none");
+                    }
+                    setClassx(v.target.value);
+                  }}
+                  InputProps={{
+                    style: {
+                      color: classx === "none" ? "#aaaaaa" : "black",
+                    },
+                  }}
+                  style={{
+                    margin: 10,
+                    width: screenSize ? "90%" : "95%",
+                  }}
+                >
+                  <MenuItem value="none" disabled style={{ color: "red" }}>
+                    Enter your class
+                  </MenuItem>
+                  <MenuItem value={6}>6th</MenuItem>
+                  <MenuItem value={7}>7th</MenuItem>
+                  <MenuItem value={8}>8th</MenuItem>
+                  <MenuItem value={9}>9th</MenuItem>
+                  <MenuItem value={10}>10th</MenuItem>
+                  <MenuItem value={11}>11th</MenuItem>
+                  <MenuItem value={12}>12th</MenuItem>
+                </TextField>
+              ) : null}
             </div>
           </div>
           <div

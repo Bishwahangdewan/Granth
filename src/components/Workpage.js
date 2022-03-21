@@ -27,7 +27,8 @@ function Workpage(props) {
   const [name, setName] = useState("");
   const [Lname, setLName] = useState("");
   const [school, setSchool] = useState("");
-  const [board, setBoard] = useState("");
+  const [board, setBoard] = useState("none");
+  const [Vboard, setVBoard] = useState("none");
   const [Vname, setVName] = useState("");
   const [age, setAge] = useState("");
   const [gender, setGender] = useState("none");
@@ -403,30 +404,53 @@ function Workpage(props) {
               }}
             >
               <div style={{ display: "flex" }}>
-                <InputLabel style={{ marginBottom: 0, color: "red" }}>
-                  {" "}
-                </InputLabel>
+                <InputLabel
+                  style={{ marginBottom: 0, color: "red" }}
+                ></InputLabel>
                 <InputLabel
                   style={{ margin: 10, marginBottom: 0, marginLeft: 4 }}
                 >
-                  School
+                  Class
                 </InputLabel>
               </div>
               <TextField
-                placeholder="School"
-                value={school}
-                variant="outlined"
-                style={{ margin: 10, width: "90%" }}
-                onChange={(t) => {
-                  // if (t.target.value === "" || isNaN(t.target.value)) {
-                  //   setVAge("Enter your correct age");
-                  // } else {
-                  //   setVAge("");
-                  // }
-                  setSchool(t.target.value);
+                select
+                error={Vclassx === "none" ? "" : Vclassx}
+                helperText={Vclassx === "none" ? "" : Vclassx}
+                value={classx}
+                onChange={(v) => {
+                  if (v.target.value === "none") {
+                    setVClassx("Enter your class");
+                  } else {
+                    setVClassx("none");
+                  }
+                  setClassx(v.target.value);
                 }}
-              />
+                InputProps={{
+                  style: {
+                    color: classx === "none" ? "#aaaaaa" : "black",
+                  },
+                }}
+                style={{
+                  margin: 10,
+                  width: "90%",
+                }}
+              >
+                <MenuItem value="none" disabled style={{ color: "red" }}>
+                  Enter your class
+                </MenuItem>
+                <MenuItem value={6}>6th</MenuItem>
+                <MenuItem value={7}>7th</MenuItem>
+                <MenuItem value={8}>8th</MenuItem>
+                <MenuItem value={9}>9th</MenuItem>
+                <MenuItem value={10}>10th</MenuItem>
+                <MenuItem value={11}>11th</MenuItem>
+                <MenuItem value={12}>12th</MenuItem>
+                <MenuItem value={"UG"}>UG</MenuItem>
+                <MenuItem value={"PG"}>PG</MenuItem>
+              </TextField>
             </div>
+
             <div
               style={{
                 // border: "2px solid red",
@@ -447,11 +471,31 @@ function Workpage(props) {
                 placeholder="Board"
                 variant="outlined"
                 value={board}
-                onChange={(t) => {
-                  setBoard(t.target.value);
-                }}
+                error={Vboard === "none" ? "" : Vboard}
+                helperText={Vboard === "none" ? "" : Vboard}
                 style={{ margin: 10, width: "90%" }}
-              />
+                select
+                onChange={(v) => {
+                  if (v.target.value === "none") {
+                    setVBoard("Enter your Board");
+                  } else {
+                    setVBoard("none");
+                  }
+                  setBoard(v.target.value);
+                }}
+                InputProps={{
+                  style: {
+                    color: Vboard === "none" ? "#aaaaaa" : "black",
+                  },
+                }}
+              >
+                <MenuItem value="none" disabled style={{ color: "red" }}>
+                  Board
+                </MenuItem>
+                <MenuItem value="ICSE">ICSE</MenuItem>
+                <MenuItem value="CBSE">CBSE</MenuItem>
+                <MenuItem value="other">Other</MenuItem>
+              </TextField>
             </div>
           </div>
           <div
@@ -547,51 +591,29 @@ function Workpage(props) {
               }}
             >
               <div style={{ display: "flex" }}>
-                <InputLabel
-                  style={{ marginBottom: 0, color: "red" }}
-                ></InputLabel>
+                <InputLabel style={{ marginBottom: 0, color: "red" }}>
+                  {" "}
+                </InputLabel>
                 <InputLabel
                   style={{ margin: 10, marginBottom: 0, marginLeft: 4 }}
                 >
-                  Class
+                  School
                 </InputLabel>
               </div>
               <TextField
-                select
-                error={Vclassx === "none" ? "" : Vclassx}
-                helperText={Vclassx === "none" ? "" : Vclassx}
-                value={classx}
-                onChange={(v) => {
-                  if (v.target.value === "none") {
-                    setVClassx("Enter your class");
-                  } else {
-                    setVClassx("none");
-                  }
-                  setClassx(v.target.value);
+                placeholder="School"
+                value={school}
+                variant="outlined"
+                style={{ margin: 10, width: screenSize ? "90%" : "95%" }}
+                onChange={(t) => {
+                  // if (t.target.value === "" || isNaN(t.target.value)) {
+                  //   setVAge("Enter your correct age");
+                  // } else {
+                  //   setVAge("");
+                  // }
+                  setSchool(t.target.value);
                 }}
-                InputProps={{
-                  style: {
-                    color: classx === "none" ? "#aaaaaa" : "black",
-                  },
-                }}
-                style={{
-                  margin: 10,
-                  width: screenSize ? "90%" : "95%",
-                }}
-              >
-                <MenuItem value="none" disabled style={{ color: "red" }}>
-                  Enter your class
-                </MenuItem>
-                <MenuItem value={6}>6th</MenuItem>
-                <MenuItem value={7}>7th</MenuItem>
-                <MenuItem value={8}>8th</MenuItem>
-                <MenuItem value={9}>9th</MenuItem>
-                <MenuItem value={10}>10th</MenuItem>
-                <MenuItem value={11}>11th</MenuItem>
-                <MenuItem value={12}>12th</MenuItem>
-                <MenuItem value={"UG"}>UG</MenuItem>
-                <MenuItem value={"PG"}>PG</MenuItem>
-              </TextField>
+              />
             </div>
           </div>
           <div

@@ -30,7 +30,15 @@ function Navbar(props) {
     else setDropdown(false);
   }, []);
   return (
-    <div style={{ marginTop: 10 }}>
+    <div
+      style={{
+        marginTop: 10,
+        position: "sticky",
+        top: 0,
+        zIndex: 100,
+        backgroundColor: "white",
+      }}
+    >
       <header className="header">
         <div
           style={{

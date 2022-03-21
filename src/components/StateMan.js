@@ -10,6 +10,8 @@ const StateMan = ({ subPages }) => {
   const [About, setAbout] = useState(false);
   const [modal, setModal] = useState(false);
   const [screenSize, setScreenSize] = useState(false);
+  const [eightten, setEightten] = useState(false);
+  const [eleventwelve, setEleventwelve] = useState(false);
   return (
     <UserContext.Provider
       value={{
@@ -21,6 +23,8 @@ const StateMan = ({ subPages }) => {
         PlanningS: [Planning, setPlanning],
         HworkS: [Hwork, setHwork],
         screenSizeS: [screenSize, setScreenSize],
+        eighttenS: [eightten, setEightten],
+        eleventwelveS: [eleventwelve, setEleventwelve],
       }}
     >
       {subPages}

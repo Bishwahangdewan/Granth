@@ -4,8 +4,10 @@ import { UserContext } from "./StateMan";
 import tenthimg from "../assests/img9-10.png";
 
 function TenthSection(props) {
-  const { modalS } = useContext(UserContext);
+  const { modalS, eighttenS } = useContext(UserContext);
   const [modal, setModal] = modalS;
+  const [eightten, setEightten] = eighttenS;
+
   return (
     <div
       style={{
@@ -177,7 +179,10 @@ function TenthSection(props) {
               color: "#5b5c5c",
               marginLeft: 0,
             }}
-            onClick={() => setModal(true)}
+            onClick={() => {
+              setEightten(true);
+              setModal(true);
+            }}
           >
             Book Now For 8th-10th
           </Button>
@@ -186,7 +191,7 @@ function TenthSection(props) {
       <div style={{ display: "flex", flexWrap: "wrap" }}>
         <img src={tenthimg} height="400px" width="500px" alt="" />
       </div>
-      <div style={{ display: "none" }}>{modal}</div>
+      <div style={{ display: "none" }}>{(modal, eightten)}</div>
     </div>
   );
 }
