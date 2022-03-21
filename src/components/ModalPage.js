@@ -426,7 +426,7 @@ function ModalPage(props) {
                   <MenuItem value={12}>12th</MenuItem>
                 </TextField>
               ) : null}
-              {eightten == false && eleventwelve == false ? (
+              {eightten === false && eleventwelve === false ? (
                 <TextField
                   select
                   error={Vclassx === "none" ? "" : Vclassx}
