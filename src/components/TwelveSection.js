@@ -4,9 +4,8 @@ import { UserContext } from "./StateMan";
 import twelveimg from "../assests/img11-12.png";
 
 function TwelveSection(props) {
-  const { modalS, screenSizeS, eleventwelveS } = useContext(UserContext);
+  const { modalS, eleventwelveS } = useContext(UserContext);
   const [modal, setModal] = modalS;
-  const [screenSize] = screenSizeS;
   const [eleventwelve, setEleventwelve] = eleventwelveS;
   return (
     <div
@@ -23,11 +22,6 @@ function TwelveSection(props) {
       }}
       id="twelveSection"
     >
-      {screenSize ? null : (
-        <div style={{ display: "flex", flexWrap: "wrap" }}>
-          <img src={twelveimg} height="400px" width="500px" alt="" />
-        </div>
-      )}
       <div
         style={{
           width: 560,
@@ -37,11 +31,27 @@ function TwelveSection(props) {
           flexWrap: "wrap",
         }}
       >
-        <Typography variant="h4" style={{ fontWeight: "bold" }}>
-          Class 11 - Class 12
-        </Typography>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            // justifyContent: "center",
+            marginLeft: 0,
+            flexWrap: "wrap",
+          }}
+        >
+          <div style={{ width: 100 }}>
+            <hr />
+          </div>
+          <div style={{ marginLeft: 10 }}>
+            <Typography style={{ color: "black" }}>
+              {" "}
+              Class 11th-12th{" "}
+            </Typography>
+          </div>
+        </div>
         <div>
-          <div style={{ display: "flex" }}>
+          <div style={{ display: "flex", marginTop: 30 }}>
             <Typography
               style={{
                 marginTop: 10,
@@ -178,27 +188,30 @@ function TwelveSection(props) {
             variant="contained"
             size="large"
             style={{
-              backgroundColor: "#fccc14",
-              width: 350,
+              backgroundColor: "white",
+              width: 250,
               paddingBlock: 15,
               margin: 10,
-              color: "#5b5c5c",
-              marginLeft: 0,
+              color: "#fccc14",
+              marginLeft: 20,
+              border: "1px solid black",
+              borderRadius: 30,
+              fontWeight: "bold",
             }}
             onClick={() => {
               setEleventwelve(true);
               setModal(true);
             }}
           >
-            Book Now For 11th-12th
+            Book For 11th-12th
           </Button>
         </div>
       </div>
-      {screenSize ? (
-        <div style={{ display: "flex", flexWrap: "wrap" }}>
-          <img src={twelveimg} height="500px" width="500px" alt="" />
-        </div>
-      ) : null}
+
+      <div style={{ display: "flex", flexWrap: "wrap" }}>
+        <img src={twelveimg} height="500px" width="500px" alt="" />
+      </div>
+
       <div style={{ display: "none" }}>{(modal, eleventwelve)}</div>
     </div>
   );

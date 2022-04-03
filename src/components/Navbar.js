@@ -1,6 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Typography, Button } from "@mui/material";
-import PhoneIcon from "@mui/icons-material/Phone";
 import DensityMediumIcon from "@mui/icons-material/DensityMedium";
 import { UserContext } from "./StateMan";
 import TsptPNG from "../assests/TsptPNG.png";
@@ -189,9 +188,7 @@ function Navbar(props) {
               </Typography>
             </Link>
           </div>
-          <div className="h1">
-            <PhoneIcon />
-          </div>
+
           <div style={{ margin: 15 }}>
             <Button
               variant="contained"
@@ -199,7 +196,7 @@ function Navbar(props) {
               style={{ backgroundColor: "#fccc14", color: "#5b5c5c" }}
               onClick={() => setModal(true)}
             >
-              Book Now
+              Let's Talk
             </Button>
           </div>
         </div>
@@ -348,7 +345,7 @@ function Navbar(props) {
               setClick(false);
             }}
           >
-            Book Now
+            Let's Talk
           </Button>
         </div>
       </div>
