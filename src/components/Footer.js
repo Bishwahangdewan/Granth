@@ -57,7 +57,7 @@ function Footer(props) {
   };
 
   return (
-    <div style={{ backgroundColor: "#ffde5e", marginTop: 60 }}>
+    <div style={{ backgroundColor: "#ffde5e" }}>
       <div
         style={{
           display: "flex",

@@ -1,18 +1,20 @@
 import React, { useContext } from "react";
-import { Typography, Button } from "@mui/material";
+import { Typography, Button, Box } from "@mui/material";
 import { UserContext } from "./StateMan";
 import slider1 from "../assests/slider1.jpg";
+import { ShowcaseContainer, ShowcaseInner, SubHeading, Heading, PrimaryButton, SecondaryButton } from '../styles/SectionA';
+
+import KeyboardTabIcon from '@mui/icons-material/KeyboardTab';
 
 function SectionA(props) {
-  const { modalS, eighttenS, eleventwelveS, screenSizeS } =
-    useContext(UserContext);
+  const { modalS, eighttenS, eleventwelveS, screenSizeS } = useContext(UserContext);
   const [modal, setModal] = modalS;
   const [eightten, setEightten] = eighttenS;
   const [eleventwelve, setEleventwelve] = eleventwelveS;
   const [screenSize] = screenSizeS;
 
   return (
-    <div
+    /*<div
       style={{
         display: "flex",
         flexDirection: "row",
@@ -140,7 +142,50 @@ function SectionA(props) {
       </div>
       <div style={{ display: "none" }}>{(modal, eightten, eleventwelve)}</div>
     </div>
-  );
+  );*/
+
+
+    <ShowcaseContainer>
+      <ShowcaseInner>
+        <Box sx={{ width: '50%', pt: '5%' }}>
+          <Box sx={{
+            mr: '-20%',
+            ml: '20%',
+            position: 'relative',
+            zIndex: 2
+          }}>
+            <SubHeading>Career Counselling</SubHeading>
+            <Heading>Let's Change How and Why you Work</Heading>
+
+            <Box sx={{
+              pt: '10%',
+              display: 'flex',
+            }}>
+              <PrimaryButton>
+                <Box component="span">Face to Face Counselling</Box>
+                <KeyboardTabIcon sx={{ ml: '10px' }}></KeyboardTabIcon>
+              </PrimaryButton>
+
+              <SecondaryButton>
+                <Box component="span">Online Counselling</Box>
+                <KeyboardTabIcon sx={{ ml: '10px' }}></KeyboardTabIcon>
+              </SecondaryButton>
+            </Box>
+          </Box>
+        </Box>
+
+        <Box sx={{ width: '50%' }}>
+          <Box sx={{
+            position: 'relative',
+            zIndex: 1
+          }}>
+            <img src="https://lycka.bold-themes.com/classy/wp-content/uploads/sites/5/2022/01/hero_home_02.jpg"
+              alt="showcase" style={{ width: '100%' }} />
+          </Box>
+        </Box>
+      </ShowcaseInner>
+    </ShowcaseContainer >
+  )
 }
 
 export default SectionA;
